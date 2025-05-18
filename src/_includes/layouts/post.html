@@ -1,0 +1,75 @@
+---
+preloadCSS: "/css/blog.css"
+eleventyComputed:
+    title: "{{ title }}"
+    description: "{{ description }}"
+    preloadImg: "{{ image }}"
+    permalink: "/resources/{{ title | sanitizeSlug }}/index.html"
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/css/post.css" />
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": "{{ title }}",
+      "image": [
+        "{{ image }}"
+       ],
+      "datePublished": "{{ date | postDate }}",
+      "dateModified": "{{ date | postDate }}",
+      "author": [{
+          "@type": "Person",
+          "name": "{{ author }}",
+          "url": "https://{{client.shortDomain}}/resources/{{ title | sanitizeSlug }}/index.html"
+        },{
+          "@type": "Person",
+          "name": "{{ author }}",
+          "url": "https://{{client.shortDomain}}/about/"
+      }]
+    }
+    </script>
+{% endblock %} {% block body %}
+<!-- ============================================ -->
+<!--              Main Blog Content               -->
+<!-- ============================================ -->
+
+<section class="ps__blog-container container">
+	<!--Main content -->
+	<div class="ps__blog--main-content">
+		<!-- ============================================ -->
+		<!--                  Blog Article                -->
+		<!-- ============================================ -->
+
+		<div class="ps__blog--blog-article col-md-8 col-xs-12">
+			<div class="ps__blog--header row">
+				<!--Main Article Image-->
+				<div class="ps__blog--mainImage col-md-6 col-xs-12">
+					<picture>
+						<img src="{{ image }}" alt="{{ imageAlt }}" width="795" height="450" decoding="async" />
+					</picture>
+				</div>
+				<!--Article Info-->
+				<div class="ps__blog--article-group col-md-6 col-xs-12">
+					{% if shortTitle %}
+					<div class="ps__sectionSmallTitle">
+						<img src="/assets/svgs/sxzar-icon.svg" alt="sxzar icon" width="20" height="20">
+						<p>{{ shortTitle }}</p>
+					</div>
+					{% endif %}
+					<h1>{{ title }}</h1>
+					<div class="ps__blog--authorGroup">
+						<span class="ps__blog--authorGroup__author">{{ author }} &nbsp;-&nbsp;</span>
+						<!--Blog Date-->
+						<span class="ps__blog--authorGroup__date">{{ date | postDate }}</span>
+					</div>
+				</div>
+
+			</div>
+			<section class="ps__blog--content">{{ content | safe }}</section>
+		</div>
+	</div>
+
+</section>
+{% endblock %}

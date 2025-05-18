@@ -1,0 +1,17 @@
+{
+	"name": "Barvado Barber Shop",
+	"email": "contact.sxzar@gmail.com",
+	"phoneForTel": "+40728938335",
+	"phoneFormatted": "(+40) 728 938 335",
+	"address": {
+		"lineOne": "First Address Line",
+		"lineTwo": "Second Address Line",
+		"city": "Willowbrook Heights",
+		"state": "Oregon",
+		"zip": "80206",
+		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+	},
+	"domain": "www.stefan-nicolau.com",
+	"shortDomain": "stefan-nicolau.com",
+	"description": "Located in the heart of Willowbrook Heights, Oregon, we bring sharp cuts and fresh styles to the community."
+}

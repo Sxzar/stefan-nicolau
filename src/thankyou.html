@@ -1,0 +1,33 @@
+{% extends "layouts/base.html" %} {% block head %} {% endblock %} {% block body %}
+<section class="text-center ps__thankyou">
+    <h1>Thank You!</h1>
+    <p>Thank you for contacting us!</p>
+    <p>We will reply promptly once your message is received</p>
+    <p>Have a great day!</p>
+    <div class="text-center">
+        <a href="/" class="ps__button-5">
+            Home Page
+        </a>
+    </div>
+</section>
+<style>
+    .ps__thankyou {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .ps__thankyou h1 {
+        color: #d94645;
+        padding: 0.5rem 0;
+    }
+    .ps__thankyou p {
+        padding: 0.5rem 0;
+    }
+    .ps__thankyou > div {
+        padding: 1rem 0;
+    }
+</style>
+
+{% endblock %}
