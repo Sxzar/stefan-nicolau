@@ -1003,6 +1003,10 @@ video {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -1015,6 +1019,14 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.justify-self-end {
+  justify-self: end;
 }
 
 .overflow-hidden {
