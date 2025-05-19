@@ -1,0 +1,23 @@
+:root {
+    --primary: oklch(0.6 0.1828 31.2);
+    --secondary: oklch(0.84 0.0791 210.08);
+    --accent: oklch(0.56 0.1914 281.34);
+    --background: oklch(0.98 0.0055 31.05);
+    --neutral: oklch(0.12 0.0221 41.66);
+    --success: oklch(79.2% 0.209 151.711);
+    --warning: oklch(75% 0.183 55.934);
+    --error: oklch(70.4% 0.191 22.216);
+    --info: oklch(74.6% 0.16 232.661);
+}
+
+html.dark {
+    --primary: oklch(0.57 0.1824 31.64);
+    --secondary: oklch(0.47 0.0745 212.76);
+    --accent: oklch(0.37 0.1954 273.9);
+    --background: oklch(0.2235 0 37.87);
+    --neutral: oklch(0.97 0.0101 32.52);
+    --success: oklch(79.2% 0.209 151.711);
+    --warning: oklch(75% 0.183 55.934);
+    --error: oklch(70.4% 0.191 22.216);
+    --info: oklch(74.6% 0.16 232.661);
+}
