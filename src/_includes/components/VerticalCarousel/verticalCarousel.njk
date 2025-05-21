@@ -2,8 +2,8 @@
 verticalCarouselCard %} {% macro verticalCarousel(props) %}
 <div class="verticalCarousel relative h-[400dvh]">
     <div class="sticky top-0 h-dvh w-full overflow-hidden">
-        {{ verticalCarouselCard()}} {{ verticalCarouselCard()}} {{
-        verticalCarouselCard()}} {{ verticalCarouselCard()}}
+        {% for card in props.data %} {{ verticalCarouselCard({ card: card })}}
+        {% endfor %}
     </div>
 </div>
 {% endmacro %}

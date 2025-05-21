@@ -7,5 +7,10 @@ from "components/VerticalCarousel/verticalCarousel.njk" import verticalCarousel
         <h2 class="font-raleway text-4xl">Selected Works</h2>
         {{ secondaryButton({ url: '/work', text: 'See More' }) }}
     </div>
-    {{ verticalCarousel() }}
+    {% if collections.work | length > 0 %} {{ verticalCarousel({ data:
+    collections.work }) }} {% else %}
+    <div class="flex h-[400dvh] items-center justify-center">
+        <p class="font-raleway text-2xl">No projects found.</p>
+    </div>
+    {% endif %}
 </section>

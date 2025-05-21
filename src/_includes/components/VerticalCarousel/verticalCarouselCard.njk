@@ -1,8 +1,15 @@
-{% macro verticalCarouselCard(props) %}
-<div
-    class="verticalCarousel--card duratiom-500 absolute left-1/2 top-0 flex h-[90dvh] w-full translate-x-[-50%] translate-y-full transform rounded-lg opacity-0 shadow-md transition-transform ease-in"
-    style="z-index: 1"
->
-    Slide 1
+{% macro verticalCarouselCard(props) %} {% set fullPath = props.card.data.image
+%} {% set parts = fullPath | split('/') %} {% set fileWithExt = parts | last %}
+{% set nameParts = fileWithExt | split('.') %} {% set imageName = nameParts[0]
+%} {% set imageDir = fullPath | replace('/' ~ fileWithExt, '') %}
+
+<div class="verticalCarousel--card rounded-[40px] shadow-md" style="z-index: 1">
+    <picture>
+        <img
+            src="{{imageDir}}/{{imageName}}-xl.webp"
+            class="h-full w-full rounded-[40px] object-cover"
+            alt=""
+        />
+    </picture>
 </div>
 {% endmacro %}
