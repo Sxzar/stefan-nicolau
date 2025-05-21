@@ -1,32 +1,37 @@
-const cards = document.querySelectorAll('.custom-card');
-const section = document.querySelector('#selectedProjects');
-const totalCards = cards.length;
+function setupAllVerticalCarousels() {
+    const carousels = document.querySelectorAll('.verticalCarousel');
 
-window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const relativeScroll = scrollTop - sectionTop;
+    carousels.forEach((carousel) => {
+        const cards = carousel.querySelectorAll('.verticalCarousel--card');
+        const totalCards = cards.length;
 
-    const step = sectionHeight / (totalCards + 0.5); // 0.8 = linger on last card
+        function handleScroll() {
+            const scrollTop = window.scrollY;
+            const sectionTop = carousel.offsetTop;
+            const sectionHeight = carousel.offsetHeight;
+            const relativeScroll = scrollTop - sectionTop;
+            const step = sectionHeight / (totalCards + 0.5);
 
-    cards.forEach((card, i) => {
-        const trigger = (i - 0.8) * step;
+            cards.forEach((card, i) => {
+                const trigger = (i - 0.8) * step;
 
-        if (scrollTop < sectionTop) {
-            // 👇 Keep first card visible before scroll reaches section
-            if (i === 0) {
-                card.classList.add('visible');
-            } else {
-                card.classList.remove('visible');
-            }
-        } else if (relativeScroll > trigger) {
-            card.classList.add('visible');
-        } else {
-            card.classList.remove('visible');
+                if (scrollTop < sectionTop) {
+                    if (i === 0) {
+                        card.classList.add('visible');
+                    } else {
+                        card.classList.remove('visible');
+                    }
+                } else if (relativeScroll > trigger) {
+                    card.classList.add('visible');
+                } else {
+                    card.classList.remove('visible');
+                }
+            });
         }
-    });
-});
 
-// 🔁 Initial trigger (show first card on page load if user is already scrolled)
-window.dispatchEvent(new Event('scroll'));
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // initial run
+    });
+}
+
+document.addEventListener('DOMContentLoaded', setupAllVerticalCarousels);
