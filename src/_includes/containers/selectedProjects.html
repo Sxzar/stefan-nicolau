@@ -1,8 +1,17 @@
-<section class="relative h-[400dvh]" id="selectedProjects">
-    <div class="sticky top-0 h-dvh w-full overflow-hidden">
-        <div class="custom-card" style="z-index: 1">Slide 1</div>
-        <div class="custom-card" style="z-index: 2">Slide 2</div>
-        <div class="custom-card" style="z-index: 3">Slide 3</div>
-        <div class="custom-card" style="z-index: 4">Slide 4</div>
+{% from "components/Button/secondaryButton.njk" import secondaryButton %}
+
+<section class="mx-auto max-w-screen-lg p-6">
+    <div class="flex items-center justify-between">
+        <h2 class="font-raleway text-4xl">Selected Works</h2>
+        {{ secondaryButton({ url: '/work', text: 'See More' }) }}
+    </div>
+
+    <div class="verticalCarousel relative h-[400dvh]">
+        <div class="sticky top-0 h-dvh w-full overflow-hidden">
+            <div class="verticalCarousel--card" style="z-index: 1">Slide 1</div>
+            <div class="verticalCarousel--card" style="z-index: 2">Slide 2</div>
+            <div class="verticalCarousel--card" style="z-index: 3">Slide 3</div>
+            <div class="verticalCarousel--card" style="z-index: 4">Slide 4</div>
+        </div>
     </div>
 </section>

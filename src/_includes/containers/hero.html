@@ -1,3 +1,5 @@
+{% from "components/Button/primaryButton.njk" import primaryButton %}
+
 <section class="mx-auto max-w-screen-lg p-6">
     <div>
         <p class="text-lg opacity-75">Hello! I'm Stefan,</p>
@@ -14,7 +16,7 @@
                 with strong development practices.
             </p>
 
-            {% include "components/Button/primaryButton.html" %}
+            {{ primaryButton() }}
         </div>
     </div>
 </section>
