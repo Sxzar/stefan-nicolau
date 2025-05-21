@@ -7,29 +7,25 @@ local_backend: true
 logo_url: https://sxzar.com/assets/svgs/logo-black.svg
 display_url: https://sxzar.com
 
-media_folder: "public/assets/images/resources"
-public_folder: "/assets/images/resources"
+media_folder: 'public/assets/images/work'
+public_folder: '/assets/images/work'
 
 collections:
-    - name: "resources"
-      label: "Resources"
-      folder: "src/content/resources"
+    - name: 'work'
+      label: 'Work'
+      folder: 'src/content/work'
       create: true
-      slug: "{{slug}}"
-      preview_path: "resources/{{slug}}"
+      slug: '{{slug}}'
+      preview_path: 'resources/{{slug}}'
       fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Short Title", name: "shortTitle", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
-          - { label: "Author", name: "author", widget: "string" }
-          - { label: "Date", name: "date", widget: "datetime" }
-          - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-          - { label: "Featured Image", name: "image", widget: "image" }
-          - {
-                label: "Thumbnail",
-                name: "thumbnail",
-                widget: "image",
-                hint: "max width of 400px"
-            }
-          - { label: "Image Caption", name: "imageAlt", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'markdown' }
+          - { label: 'Task', name: 'task', widget: 'markdown' }
+          - { label: 'Client', name: 'client', widget: 'string' }
+          - { label: 'Project Date', name: 'projectDate', widget: 'datetime' }
+          - { label: 'Author', name: 'author', widget: 'string' }
+          - { label: 'Date', name: 'date', widget: 'datetime' }
+          - { label: 'Tags', name: 'tags', widget: 'list', default: ['post'] }
+          - { label: 'Featured Image', name: 'image', widget: 'image' }
+          - { label: 'Image Caption', name: 'imageAlt', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }

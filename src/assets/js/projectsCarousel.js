@@ -17,14 +17,24 @@ function setupAllVerticalCarousels() {
 
                 if (scrollTop < sectionTop) {
                     if (i === 0) {
-                        card.classList.add('visible');
+                        card.classList.add('translate-y-[40px]', 'opacity-100');
+                        card.classList.remove(
+                            'translate-y-[100px]',
+                            'opacity-0'
+                        );
                     } else {
-                        card.classList.remove('visible');
+                        card.classList.add('translate-y-[100px]', 'opacity-0');
+                        card.classList.remove(
+                            'translate-y-[40px]',
+                            'opacity-100'
+                        );
                     }
                 } else if (relativeScroll > trigger) {
-                    card.classList.add('visible');
+                    card.classList.add('translate-y-[40px]', 'opacity-100');
+                    card.classList.remove('translate-y-[100px]', 'opacity-0');
                 } else {
-                    card.classList.remove('visible');
+                    card.classList.add('translate-y-[100px]', 'opacity-0');
+                    card.classList.remove('translate-y-[40px]', 'opacity-100');
                 }
             });
         }
