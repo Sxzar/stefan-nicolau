@@ -3,13 +3,57 @@
 {% set nameParts = fileWithExt | split('.') %} {% set imageName = nameParts[0]
 %} {% set imageDir = fullPath | replace('/' ~ fileWithExt, '') %}
 
-<div class="verticalCarousel--card rounded-[40px] shadow-md" style="z-index: 1">
-    <picture>
-        <img
-            src="{{imageDir}}/{{imageName}}-xl.webp"
-            class="h-full w-full rounded-[40px] object-cover"
-            alt=""
-        />
-    </picture>
+<!-- Tags -->
+
+<div
+    class="verticalCarousel--card group z-10 overflow-hidden rounded-[40px] !bg-stone-200 shadow-md"
+>
+    <a href="{% if props.card.url %}{{ props.card.url }}{% else %}#{% endif %}">
+        {% if props.card.data.image %}
+        <picture>
+            <img
+                src="{{imageDir}}/{{imageName}}-l.webp"
+                class="h-full w-full rounded-[42px] object-cover transition-all duration-500 group-hover:scale-105"
+                alt="{{ props.card.data.imageAlt }}"
+            />
+        </picture>
+        {% else %}
+        <div
+            class="animate-shimmer absolute inset-0 -translate-x-full transform bg-gradient-to-r from-stone-200 via-stone-300 to-stone-200"
+        ></div>
+        {% endif %}
+        <div
+            class="absolute bottom-0 left-0 right-0 flex h-[35%] items-end rounded-b-[40px] bg-gradient-to-t from-stone-400 to-transparent"
+        >
+            <div class="flex w-full flex-col gap-2 p-6 text-white">
+                <h3 class="font-raleway text-3xl font-bold">
+                    {{ props.card.data.title }}
+                </h3>
+                {% if props.card.data.tags %}
+                <p
+                    class="trabsition-all text-lg uppercase transition duration-300 group-hover:-translate-y-5 group-hover:opacity-0"
+                >
+                    {% for tag in props.card.data.tags | reject("equalto",
+                    "work") | reject("equalto", "featured") %} {{ tag }} {% if
+                    not loop.last %},{% endif %} {% endfor %}
+                </p>
+                <a
+                    href="{{props.card.url}}"
+                    class="-mt-4 flex items-center gap-2 text-xl opacity-0 transition duration-300 group-hover:-translate-y-5 group-hover:opacity-100"
+                    >{{props.cta | default('View More')}}
+                    <span class="block h-[1px] w-10 bg-white"></span
+                ></a>
+                {% else %}
+                <a
+                    href="{% if props.card.url %}{{ props.card.url }}{% else %}#{% endif %}"
+                    class="flex items-center gap-2 text-xl"
+                    >{{props.cta | default('View More')}}<span
+                        class="block h-[1px] w-10 bg-white"
+                    ></span
+                ></a>
+                {% endif %}
+            </div>
+        </div>
+    </a>
 </div>
 {% endmacro %}

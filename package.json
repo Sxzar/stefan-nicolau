@@ -5,11 +5,11 @@
     "main": "index.js",
     "scripts": {
         "watch:eleventy": "eleventy --serve",
-        "build:images": "node resize-work-images.js",
         "build:eleventy": "eleventy",
+        "build:images": "node resize-work-images.js",
         "watch:cms": "npx netlify-cms-proxy-server",
         "start": "del-cli ./public --force && npm-run-all --parallel watch:*",
-        "build": "npm-run-all --parallel build:*",
+        "build": "npm-run-all build:images build:eleventy",
         "tailwind": "tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/theme.css --watch"
     },
     "keywords": [],
