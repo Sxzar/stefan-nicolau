@@ -56,4 +56,7 @@ html.dark .sun-icon {
   opacity: 1;
 }
 
-
+#curveTop {
+    clip-path: path('M 0 0 Q 50% 100 100% 0 L 100% 100% L 0 100% Z');
+    transition: clip-path 0.2s ease-out;
+}

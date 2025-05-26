@@ -2,6 +2,7 @@
 module.exports = {
     mode: 'jit',
     content: ['./src/**/*.{njk,html,js}', './src/**/*.{njk,html,js}'],
+    darkMode: 'class',
     theme: {
         extend: {
             screens: {
