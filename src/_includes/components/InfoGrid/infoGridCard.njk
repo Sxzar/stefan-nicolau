@@ -10,9 +10,7 @@
             {{ props.item.title | default('Please provide a title') }}
         </h4>
         {% if props.item.subtitle %}
-        <h5 class="mb-4 whitespace-nowrap text-lg">
-            {{ props.item.subtitle }}
-        </h5>
+        <h5 class="mb-4 text-lg">{{ props.item.subtitle }}</h5>
         {% endif %} {% if props.item.startDate and props.item.endDate %}
         <span class="rounded-lg bg-stone-500 p-2 font-medium text-white"
             >{{props.item.startDate}} - {{props.item.endDate}}</span

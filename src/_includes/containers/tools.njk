@@ -1,0 +1,13 @@
+{% from "components/toolCard.njk" import toolCard %}
+
+<section class="mx-auto max-w-screen-lg p-6">
+    <h2
+        class="text-center font-raleway text-4xl font-medium leading-normal md:text-6xl"
+    >
+        Every project is different, but I keep coming back to
+        <span class="text-primary">this set of core technologies.</span>
+    </h2>
+    <div class="mt-10 flex flex-wrap justify-around gap-6 pt-10">
+        {% for tool in tools %} {{ toolCard({card: tool})}} {% endfor %}
+    </div>
+</section>

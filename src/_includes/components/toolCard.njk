@@ -1,0 +1,18 @@
+{% macro toolCard(props) %}
+<section
+    class="group relative w-[125px] overflow-hidden rounded-full p-4 text-center after:absolute after:inset-0 after:z-[-1] after:bg-neutral after:opacity-5 after:content-['']"
+>
+    <picture>
+        <img
+            src="/assets/images/tools/{{ props.card.icon }}"
+            alt="{{ props.card.title }}"
+            loading="lazy"
+            decoding="async"
+            width="60"
+            height="60"
+            class="mx-auto mt-6 min-h-[50px] saturate-[.25] transition-all duration-500 ease-in-out group-hover:scale-90 group-hover:saturate-100"
+        />
+    </picture>
+    <h3 class="my-6 text-xl font-semibold">{{ props.card.title }}</h3>
+</section>
+{% endmacro %}

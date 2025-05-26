@@ -1,0 +1,26 @@
+[
+    {
+        "title": "JavaScript",
+        "icon": "javascript.svg"
+    },
+    {
+        "title": "PHP",
+        "icon": "php.svg"
+    },
+    {
+        "title": "React.js",
+        "icon": "react.svg"
+    },
+    {
+        "title": "Tailwind CSS",
+        "icon": "tailwind.svg"
+    },
+    {
+        "title": "Next.js",
+        "icon": "next.svg"
+    },
+    {
+        "title": "MySQL",
+        "icon": "mysql.svg"
+    }
+]
