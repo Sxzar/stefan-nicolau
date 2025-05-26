@@ -1,0 +1,19 @@
+{% from "components/Button/primaryButton.njk" import primaryButton %} {% from
+"components/InfoGrid/infoGrid.njk" import infoGrid %}
+
+<section class="mx-auto mt-10 max-w-screen-lg p-6">
+    <h2 class="font-raleway text-4xl font-medium leading-normal md:text-6xl">
+        I didn't start in tech, but
+        <span class="text-primary">I made the switch on purpose.</span>
+    </h2>
+    <div class="flex flex-row-reverse items-center justify-between">
+        <p class="my-8 max-w-lg text-2xl opacity-75">
+            I studied business, then moved into development through hands-on
+            learning, certifications, and real projects. That mix still shapes
+            how I work today.
+        </p>
+        {{ primaryButton() }}
+    </div>
+    <div>{{ infoGrid({ data: education }) }}</div>
+    <div>{{ infoGrid({ data: certifications }) }}</div>
+</section>

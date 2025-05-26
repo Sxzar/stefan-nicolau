@@ -1,0 +1,30 @@
+{
+    "title": "Certifications & Courses",
+    "data": [
+        {
+            "title": "React - The Complete Guide",
+            "subtitle": "Udemy · 2023",
+            "description": "React.js, Next.js, JavaScript, REST APIs"
+        },
+        {
+            "title": "Practical PHP",
+            "subtitle": "Udemy · 2022",
+            "description": "PHP, HTML5, CSS"
+        },
+        {
+            "title": "The Web Developer Bootcamp",
+            "subtitle": "Udemy · 2022",
+            "description": "JavaScript, Node.js, Express, MongoDB"
+        },
+        {
+            "title": "Google Udacity Developer Challenge Scholarship",
+            "subtitle": "Udacity · 2018",
+            "description": "HTML5, CSS3, JavaScript, Responsive Design"
+        },
+        {
+            "title": "Web Developer - PHP & MySQL",
+            "subtitle": "Crystal Mind Academy · Bucharest, Romania · 2016",
+            "description": "PHP, MySQL, HTML5, CSS3, JavaScript"
+        }
+    ]
+}
