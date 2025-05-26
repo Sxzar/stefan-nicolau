@@ -13,7 +13,7 @@ function setupAllVerticalCarousels() {
             const step = sectionHeight / (totalCards + 0.5);
 
             cards.forEach((card, i) => {
-                const trigger = (i - 0.8) * step;
+                const trigger = (i - 0.5) * step;
 
                 if (scrollTop < sectionTop) {
                     if (i === 0) {

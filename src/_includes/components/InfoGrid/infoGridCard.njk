@@ -1,0 +1,28 @@
+{% macro infoGridCard(props) %}
+<section class="my-4 flex flex-col border-l px-4 pb-1">
+    <div>
+        {% if props.item.id %}
+        <span class="font-raleway text-xl font-semibold opacity-75"
+            >{% if props.item.id < 10 %}0{% endif %}{{ props.item.id }}.</span
+        >
+        {% endif %}
+        <h4 class="my-4 text-3xl">
+            {{ props.item.title | default('Please provide a title') }}
+        </h4>
+        {% if props.item.subtitle %}
+        <h5 class="mb-4 whitespace-nowrap text-lg">
+            {{ props.item.subtitle }}
+        </h5>
+        {% endif %} {% if props.item.startDate and props.item.endDate %}
+        <span class="rounded-lg bg-stone-500 p-2 font-medium text-white"
+            >{{props.item.startDate}} - {{props.item.endDate}}</span
+        >
+        {% endif %}
+    </div>
+    <div class="mt-8">
+        {% if props.item.description %}
+        <p class="text-sm opacity-75">{{ props.item.description }}</p>
+        {% endif %}
+    </div>
+</section>
+{% endmacro %}

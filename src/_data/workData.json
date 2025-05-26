@@ -1,0 +1,61 @@
+{
+    "title": "Experience",
+    "data": [
+        {
+            "id": 1,
+            "title": "Rgifts LTD",
+            "subtitle": "Full Stack Developer",
+            "startDate": "Feb 2020",
+            "endDate": "Present",
+            "description": "At Rgifts LTD, I work with PrestaShop and Shopify to build fast, reliable eCommerce platforms. I focus on reusable features, API integrations, and improving performance across both frontend and backend."
+        },
+        {
+            "id": 2,
+            "title": "Freelance",
+            "subtitle": "Full Stack Developer",
+            "startDate": "Oct 2015",
+            "endDate": "Present",
+            "description": "As a freelance developer, I build custom websites and web apps for startups, agencies, and small businesses. My work spans full-stack development, custom themes, reusable components, and modern integrations."
+        },
+        {
+            "id": 3,
+            "title": "Videt",
+            "subtitle": "Graphic & Web Designer",
+            "startDate": "Aug 2019",
+            "endDate": "May 2020",
+            "description": "At VIDET, I created landing pages, digital ads, and print materials across multiple campaigns. I supported both design and marketing teams, keeping visual identity consistent and execution sharp."
+        },
+        {
+            "id": 4,
+            "title": "B&B Collection",
+            "subtitle": "Graphic Designer",
+            "startDate": "Jul 2019",
+            "endDate": "Feb 2020",
+            "description": "At B&B Collection, I designed promotional assets for web and print, including 3D mockups and marketing videos. I also developed Instagram filters with Spark AR and produced animated content for social campaigns."
+        },
+        {
+            "id": 5,
+            "title": "PATHWWWAY",
+            "subtitle": "Web Designer",
+            "startDate": "Mar 2019",
+            "endDate": "Jul 2019",
+            "description": "At PATHWWWAY, I delivered landing pages, banners, and visual assets for online gaming projects. I also designed logos and supported tight delivery schedules for fast-paced launches and updates."
+        },
+        {
+            "id": 6,
+            "title": "Melkior Cosmetics",
+            "subtitle": "Web Designer",
+            "startDate": "Aug 2017",
+            "endDate": "Mar 2019",
+            "description": "At Melkior Cosmetics, I maintained PrestaShop-based eCommerce sites and created digital and print materials. I also handled photo retouching and supported internal teams with tech and design needs."
+        },
+        {
+            "id": 7,
+            "title": "Computer Generated Solutions",
+            "subtitle": "Technical Support Representative",
+            "startDate": "Nov 2016",
+            "endDate": "Aug 2017",
+            "description": "At CGS, I supported AOL users by troubleshooting technical issues across Windows, macOS, and Linux. I focused on clear communication, problem-solving, and maintaining a calm, professional tone."
+        }
+    ]
+}
