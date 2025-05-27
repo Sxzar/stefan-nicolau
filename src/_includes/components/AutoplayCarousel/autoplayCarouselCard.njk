@@ -1,0 +1,11 @@
+{% macro autoplayCarouselCard(props) %}
+<figure class="slide px-6 py-14">
+    <blockquote class="text-center font-raleway text-xl italic">
+        “{{ props.text | safe }}”
+    </blockquote>
+    <figcaption class="py-4 text-center font-medium">
+        - {{ props.name }}
+    </figcaption>
+</figure>
+
+{% endmacro %}

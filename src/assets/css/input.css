@@ -18,45 +18,58 @@
 }
 
 html:not(.dark) .moon-icon {
-  opacity: 0;
-  transform: scale(0.75);
+    opacity: 0;
+    transform: scale(0.75);
 }
 html:not(.dark) .sun-icon {
-  opacity: 1;
-  transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
 }
 
 html.dark .moon-icon {
-  opacity: 1;
-  transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
 }
 html.dark .sun-icon {
-  opacity: 0;
-  transform: scale(0.75);
+    opacity: 0;
+    transform: scale(0.75);
 }
 
-
 .verticalCarousel--card {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 100%);
-  width: 100%;
-  height: 90vh;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--background);
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    width: 100%;
+    height: 90vh;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+    opacity: 0;
 }
 
 .verticalCarousel--card.visible {
-  transform: translate(-50%, 40px);
-  opacity: 1;
+    transform: translate(-50%, 40px);
+    opacity: 1;
 }
 
 #curveTop {
     clip-path: path('M 0 0 Q 50% 100 100% 0 L 100% 100% L 0 100% Z');
     transition: clip-path 0.2s ease-out;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides-container .slide {
+    flex: 0 0 100%;
+}
+.slides-container .dot.active {
+    background-color: #000;
 }

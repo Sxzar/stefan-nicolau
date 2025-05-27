@@ -1,0 +1,12 @@
+{% from "components/AutoplayCarousel/autoplayCarousel.njk" import
+autoplayCarousel %}
+
+<section class="mx-auto max-w-screen-lg p-6">
+    <h2
+        class="text-center font-raleway text-4xl font-medium leading-normal md:text-6xl"
+    >
+        Good feedback means more when it
+        <span class="text-primary">comes from people you've worked with.</span>
+    </h2>
+    <div>{{ autoplayCarousel({ data: testimonials }) }}</div>
+</section>

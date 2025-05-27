@@ -1,0 +1,20 @@
+{% from "components/AutoplayCarousel/autoplayCarouselCard.njk" import
+autoplayCarouselCard %} {% macro autoplayCarousel(props) %}
+<div class="autoplayCarousel relative mx-auto w-full max-w-xl overflow-hidden">
+    <div class="slides-container">
+        {% for item in props.data %} {{ autoplayCarouselCard(item) }} {% endfor
+        %}
+    </div>
+    <div
+        class="dots-container absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2"
+    >
+        {% for item in props.data %}
+        <button
+            class="dot h-3 w-3 rounded-full bg-gray-400"
+            data-index="{{ loop.index0 }}"
+        ></button>
+        {% endfor %}
+    </div>
+</div>
+
+{% endmacro %}
