@@ -1024,6 +1024,10 @@ video {
   margin-top: 96px;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1424,6 +1428,10 @@ video {
   padding-top: 2.5rem;
 }
 
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1765,12 +1773,40 @@ html.dark .sun-icon {
 }
 
 @media (min-width: 768px) {
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:inline {
+    display: inline;
+  }
+
   .md\:flex {
     display: flex;
   }
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .md\:pb-0 {
+    padding-bottom: 0px;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-center {
+    text-align: center;
   }
 
   .md\:text-6xl {

@@ -16,7 +16,7 @@ eleventyNavigation:
 ></script>
 
 {% endblock %} {% block body %} {% from "containers/curvedContainer.njk" import
-curvedContainer %} {% include "containers/hero.html" %} {% include
+curvedContainer %} {% include "containers/hero.njk" %} {% include
 "containers/selectedProjects.html" %}{% include "containers/experience.njk" %}
 {{ curvedContainer({ file: "containers/tools.njk", tools: tools }) }}{% include
 "containers/education.njk" %} {% include "containers/testimonials.njk" %} {%
