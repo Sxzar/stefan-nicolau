@@ -35,6 +35,8 @@
         <meta name="twitter:description" content="{{ description }}" />
         <meta name="twitter:image" content="/assets/images/og-image.jpg" />
 
+        <meta name="author" content="Stefan Nicolau" />
+
         <!--Favicons-->
         <link
             rel="apple-touch-icon"
@@ -83,7 +85,7 @@
 
         {% include "containers/header.html" %}
         <main id="main">{% block body %}{% endblock %}</main>
-        {% include "containers/footer.html" %} {% include
+        {% include "containers/footer.njk" %} {% include
         "containers/scripts.html" %}
     </body>
 </html>

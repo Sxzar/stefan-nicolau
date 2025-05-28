@@ -976,6 +976,11 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1001,6 +1006,10 @@ video {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-6 {
@@ -1043,12 +1052,12 @@ video {
   height: 0.75rem;
 }
 
-.h-\[1px\] {
-  height: 1px;
+.h-6 {
+  height: 1.5rem;
 }
 
-.h-\[200dvh\] {
-  height: 200dvh;
+.h-\[1px\] {
+  height: 1px;
 }
 
 .h-\[35\%\] {
@@ -1092,12 +1101,20 @@ video {
   width: 0.75rem;
 }
 
+.w-6 {
+  width: 1.5rem;
+}
+
 .w-64 {
   width: 16rem;
 }
 
 .w-\[125px\] {
   width: 125px;
+}
+
+.w-\[200px\] {
+  width: 200px;
 }
 
 .w-full {
@@ -1220,6 +1237,10 @@ video {
   gap: 1.5rem;
 }
 
+.gap-8 {
+  gap: 2rem;
+}
+
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1281,6 +1302,10 @@ video {
   background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
 }
 
+.bg-neutral {
+  background-color: var(--neutral);
+}
+
 .bg-stone-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(120 113 108 / var(--tw-bg-opacity, 1));
@@ -1329,6 +1354,10 @@ video {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
+.fill-neutral {
+  fill: var(--neutral);
+}
+
 .fill-stone-900 {
   fill: #1c1917;
 }
@@ -1365,19 +1394,14 @@ video {
   padding-right: 1.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
 .py-14 {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-0 {
@@ -1603,17 +1627,17 @@ html.dark .sun-icon {
   transition: clip-path 0.2s ease-out;
 }
 
-.slides-container {
+.autoplayCarousel .slides-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
 
-.slides-container .slide {
+.autoplayCarousel .slide {
   flex: 0 0 100%;
 }
 
-.slides-container .dot.active {
-  background-color: #000;
+.autoplayCarousel .dot.active {
+  opacity: 0.25;
 }
 
 .after\:absolute::after {
@@ -1700,6 +1724,10 @@ html.dark .sun-icon {
   --tw-scale-x: .9;
   --tw-scale-y: .9;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:fill-primary {
+  fill: var(--primary);
 }
 
 .group:hover .group-hover\:opacity-0 {

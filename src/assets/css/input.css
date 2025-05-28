@@ -62,14 +62,15 @@ html.dark .sun-icon {
     transition: clip-path 0.2s ease-out;
 }
 
-.slides-container {
+.autoplayCarousel .slides-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.slides-container .slide {
+.autoplayCarousel .slide {
     flex: 0 0 100%;
 }
-.slides-container .dot.active {
-    background-color: #000;
+
+.autoplayCarousel .dot.active {
+    opacity: 0.25;
 }
