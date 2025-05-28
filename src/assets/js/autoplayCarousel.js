@@ -57,11 +57,18 @@ class AutoplayCarousel {
         this.start();
     }
     showSlide(index) {
+        if (index >= this.slides.length) {
+            index = this.slides.length - 1;
+        } else if (index < 0) {
+            index = 0;
+        }
+
         this.track.style.transition = 'transform 0.5s ease-in-out';
         this.track.style.transform = `translateX(-${index * 100}%)`;
         this.current = index;
 
-        const visibleIndex = (index - 1 + this.dots.length) % this.dots.length;
+        const visibleIndex =
+            (this.current - 1 + this.dots.length) % this.dots.length;
         this.dots.forEach((dot, i) => {
             dot.classList.toggle('active', i === visibleIndex);
         });
@@ -71,6 +78,7 @@ class AutoplayCarousel {
     }
 
     nextSlide() {
+        if (this.current >= this.slides.length - 1) return;
         this.showSlide(this.current + 1);
     }
 
