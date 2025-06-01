@@ -22,60 +22,6 @@ html.dark {
   --info: oklch(74.6% 0.16 232.661);
 }
 
-/* roboto-100 - latin */
-
-@font-face {
-  font-display: swap;
-
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-
-  font-family: 'Roboto';
-
-  font-style: normal;
-
-  font-weight: 100;
-
-  src: url('../fonts/roboto-v47-latin-100.woff2') format('woff2');
-
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* roboto-200 - latin */
-
-@font-face {
-  font-display: swap;
-
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-
-  font-family: 'Roboto';
-
-  font-style: normal;
-
-  font-weight: 200;
-
-  src: url('../fonts/roboto-v47-latin-200.woff2') format('woff2');
-
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* roboto-300 - latin */
-
-@font-face {
-  font-display: swap;
-
-  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-
-  font-family: 'Roboto';
-
-  font-style: normal;
-
-  font-weight: 300;
-
-  src: url('../fonts/roboto-v47-latin-300.woff2') format('woff2');
-
-  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
 /* roboto-regular - latin */
 
 @font-face {
@@ -83,13 +29,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Roboto';
+  font-family: "Roboto";
 
   font-style: normal;
 
   font-weight: 400;
 
-  src: url('../fonts/roboto-v47-latin-regular.woff2') format('woff2');
+  src: url("../fonts/roboto-v47-latin-regular.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -101,13 +47,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Roboto';
+  font-family: "Roboto";
 
   font-style: normal;
 
   font-weight: 500;
 
-  src: url('../fonts/roboto-v47-latin-500.woff2') format('woff2');
+  src: url("../fonts/roboto-v47-latin-500.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -119,13 +65,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Roboto';
+  font-family: "Roboto";
 
   font-style: normal;
 
   font-weight: 600;
 
-  src: url('../fonts/roboto-v47-latin-600.woff2') format('woff2');
+  src: url("../fonts/roboto-v47-latin-600.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -137,13 +83,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Roboto';
+  font-family: "Roboto";
 
   font-style: normal;
 
   font-weight: 700;
 
-  src: url('../fonts/roboto-v47-latin-700.woff2') format('woff2');
+  src: url("../fonts/roboto-v47-latin-700.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -155,13 +101,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Roboto';
+  font-family: "Roboto";
 
   font-style: normal;
 
   font-weight: 800;
 
-  src: url('../fonts/roboto-v47-latin-800.woff2') format('woff2');
+  src: url("../fonts/roboto-v47-latin-800.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -173,13 +119,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Roboto';
+  font-family: "Roboto";
 
   font-style: normal;
 
   font-weight: 900;
 
-  src: url('../fonts/roboto-v47-latin-900.woff2') format('woff2');
+  src: url("../fonts/roboto-v47-latin-900.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -191,13 +137,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Raleway';
+  font-family: "Raleway";
 
   font-style: normal;
 
   font-weight: 400;
 
-  src: url('../fonts/raleway-v34-latin-regular.woff2') format('woff2');
+  src: url("../fonts/raleway-v34-latin-regular.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -209,13 +155,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Raleway';
+  font-family: "Raleway";
 
   font-style: normal;
 
   font-weight: 500;
 
-  src: url('../fonts/raleway-v34-latin-500.woff2') format('woff2');
+  src: url("../fonts/raleway-v34-latin-500.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -227,13 +173,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Raleway';
+  font-family: "Raleway";
 
   font-style: normal;
 
   font-weight: 600;
 
-  src: url('../fonts/raleway-v34-latin-600.woff2') format('woff2');
+  src: url("../fonts/raleway-v34-latin-600.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -245,13 +191,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Raleway';
+  font-family: "Raleway";
 
   font-style: normal;
 
   font-weight: 700;
 
-  src: url('../fonts/raleway-v34-latin-700.woff2') format('woff2');
+  src: url("../fonts/raleway-v34-latin-700.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -263,13 +209,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Raleway';
+  font-family: "Raleway";
 
   font-style: normal;
 
   font-weight: 800;
 
-  src: url('../fonts/raleway-v34-latin-800.woff2') format('woff2');
+  src: url("../fonts/raleway-v34-latin-800.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -281,13 +227,13 @@ html.dark {
 
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 
-  font-family: 'Raleway';
+  font-family: "Raleway";
 
   font-style: normal;
 
   font-weight: 900;
 
-  src: url('../fonts/raleway-v34-latin-900.woff2') format('woff2');
+  src: url("../fonts/raleway-v34-latin-900.woff2") format("woff2");
 
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -1000,6 +946,10 @@ video {
   margin-top: -1rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1024,12 +974,16 @@ video {
   margin-top: 96px;
 }
 
-.mb-10 {
-  margin-bottom: 2.5rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .block {
   display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -1109,10 +1063,6 @@ video {
   width: 1.5rem;
 }
 
-.w-64 {
-  width: 16rem;
-}
-
 .w-\[125px\] {
   width: 125px;
 }
@@ -1144,6 +1094,10 @@ video {
 
 .max-w-xl {
   max-width: 36rem;
+}
+
+.max-w-xs {
+  max-width: 20rem;
 }
 
 .-translate-x-1\/2 {
@@ -1301,11 +1255,6 @@ video {
   background-color: rgb(0 0 0 / 0.5);
 }
 
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity, 1));
-}
-
 .bg-neutral {
   background-color: var(--neutral);
 }
@@ -1428,20 +1377,16 @@ video {
   padding-top: 2.5rem;
 }
 
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
 .text-center {
   text-align: center;
 }
 
 .font-raleway {
-  font-family: Raleway, sans-serif;
+  font-family: Raleway, Segoe UI, Helvetica Neue, sans-serif;
 }
 
 .font-roboto {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto, Segoe UI, Helvetica Neue, sans-serif;
 }
 
 .text-2xl {
@@ -1576,18 +1521,6 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 html:not(.dark) .moon-icon {
   opacity: 0;
   transform: scale(0.75);
@@ -1620,8 +1553,8 @@ html.dark .sun-icon {
   align-items: center;
   background-color: var(--background);
   transition:
-        transform 0.5s ease,
-        opacity 0.5s ease;
+    transform 0.5s ease,
+    opacity 0.5s ease;
   opacity: 0;
 }
 
@@ -1631,7 +1564,7 @@ html.dark .sun-icon {
 }
 
 #curveTop {
-  clip-path: path('M 0 0 Q 50% 100 100% 0 L 100% 100% L 0 100% Z');
+  clip-path: path("M 0 0 Q 50% 100 100% 0 L 100% 100% L 0 100% Z");
   transition: clip-path 0.2s ease-out;
 }
 
@@ -1773,10 +1706,6 @@ html.dark .sun-icon {
 }
 
 @media (min-width: 768px) {
-  .md\:mb-10 {
-    margin-bottom: 2.5rem;
-  }
-
   .md\:block {
     display: block;
   }
@@ -1789,24 +1718,36 @@ html.dark .sun-icon {
     display: flex;
   }
 
+  .md\:grid {
+    display: grid;
+  }
+
   .md\:hidden {
     display: none;
+  }
+
+  .md\:w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
   }
 
   .md\:flex-row-reverse {
     flex-direction: row-reverse;
   }
 
-  .md\:pb-0 {
-    padding-bottom: 0px;
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
   }
 
   .md\:text-left {
     text-align: left;
-  }
-
-  .md\:text-center {
-    text-align: center;
   }
 
   .md\:text-6xl {

@@ -1,13 +1,9 @@
 {% set navPages = collections.all | eleventyNavigation %}
 
-<nav
-    class="relative mx-auto flex max-w-screen-lg items-center justify-between p-6 font-raleway"
-    role="navigation"
-    aria-label="Main Navigation"
-    id="navbar"
->
+<nav class="relative mx-auto flex max-w-screen-lg items-center justify-between p-6 font-raleway" role="navigation"
+    aria-label="Main Navigation" id="navbar">
     <div>
-        <a href="/" class="text-2xl">{{ client.name }}</a>
+        <a href="/" class="text-2xl" aria-label="return to home page">{{ client.name }}</a>
     </div>
 
     <ul class="hidden gap-4 text-lg md:flex">

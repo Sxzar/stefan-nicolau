@@ -2,90 +2,74 @@
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Standard meta tags -->
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="{{ description }}" />
-        <meta name="keywords" content="" />
-        <link
-            rel="canonical"
-            href="https://{{ client.shortDomain }}{{ page.url }}"
-        />
 
-        <!-- Facebook Meta Tags -->
-        <meta
-            property="og:url"
-            content="https://{{ client.shortDomain }}{{ page.url }}"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="{{ title }}" />
-        <meta property="og:description" content="{{ description }}" />
-        <meta property="og:image" content="/assets/images/og-image.jpg" />
+<head>
+    <!-- Standard meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="" />
+    <link rel="canonical" href="https://{{ client.shortDomain }}{{ page.url }}" />
 
-        <!-- Twitter Meta Tags -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="{{ client.shortDomain }}" />
-        <meta
-            property="twitter:url"
-            content="https://{{ client.shortDomain }}{{ page.url }}"
-        />
-        <meta name="twitter:title" content="{{ title }}" />
-        <meta name="twitter:description" content="{{ description }}" />
-        <meta name="twitter:image" content="/assets/images/og-image.jpg" />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://{{ client.shortDomain }}{{ page.url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:image" content="/assets/images/og-image.jpg" />
 
-        <meta name="author" content="Stefan Nicolau" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="{{ client.shortDomain }}" />
+    <meta property="twitter:url" content="https://{{ client.shortDomain }}{{ page.url }}" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:image" content="/assets/images/og-image.jpg" />
 
-        <!--Favicons-->
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/assets/favicons/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/assets/favicons/favicon-32x32.png?v1"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/assets/favicons/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/assets/favicons/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="oklch(0.6 0.1828 31.2)" />
-        <meta name="theme-color" content="oklch(0.98 0.0055 31.05)" />
+    <meta name="author" content="Stefan Nicolau" />
 
-        <!-- Preloads -->
+    <!--Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png?v1" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="oklch(0.6 0.1828 31.2)" />
+    <meta name="theme-color" content="oklch(0.98 0.0055 31.05)" />
 
-        <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
-        {% if preloadImg != '' and preloadImg %}
-        <link rel="preload" as="image" href="{{ preloadImg }}" />
-        {% endif %}
+    <!-- Preloads -->
 
-        <!-- Site wide Stylesheets and Scripts -->
-        <link rel="stylesheet" href="/assets/css/theme.css" />
+    <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
+    {% if preloadImg != '' and preloadImg %}
+    <link rel="preload" as="image" href="{{ preloadImg }}" />
+    {% endif %}
 
-        {% block head %}{% endblock %}
 
-        <title>
-            {% if page.url == '/'%} {{ title }} | {{ client.name }} | {{
-            client.address.city }}, {{ client.address.state }} {% else %} {{
-            title }} | {{ client.name }} {% endif %}
-        </title>
-    </head>
+    <link rel="stylesheet" href="/assets/css/theme.css">
 
-    <body class="bg-base-100 font-roboto text-neutral">
-        <a class="sr-only" aria-label="skip to main content" href="#main"
-            >Click To Skip To Main Content</a
-        >
+    <link rel="preload" href="/assets/fonts/raleway-v34-latin-500.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous" />
+    <link rel="preload" href="/assets/fonts/roboto-v47-latin-regular.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous" />
 
-        {% include "containers/header.html" %}
-        <main id="main">{% block body %}{% endblock %}</main>
-        {% include "containers/footer.njk" %} {% include
-        "containers/scripts.html" %}
-    </body>
+
+    {% block head %}{% endblock %}
+
+    <title>
+        {% if page.url == '/'%} {{ title }} | {{ client.name }} | {{
+        client.address.city }}, {{ client.address.state }} {% else %} {{
+        title }} | {{ client.name }} {% endif %}
+    </title>
+
+</head>
+
+<body class="bg-base-100 font-roboto text-neutral">
+    <a class="sr-only" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
+
+    {% include "containers/header.html" %}
+    <main id="main">{% block body %}{% endblock %}</main>
+    {% include "containers/footer.njk" %} {% include
+    "containers/scripts.html" %}
+</body>
+
 </html>

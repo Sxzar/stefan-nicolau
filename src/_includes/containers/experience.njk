@@ -10,6 +10,11 @@
         It's not just the output that matters, but the process and the people
         behind it.
     </p>
-    {{ primaryButton() }}
+    <div class="md:inline hidden">
+        {{ primaryButton() }}
+    </div>
     <div>{{ infoGrid({ data: workData }) }}</div>
+    <div class="md:hidden flex justify-center">
+        {{ primaryButton() }}
+    </div>
 </section>

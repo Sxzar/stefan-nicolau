@@ -6,14 +6,19 @@
         I didn't start in tech, but
         <span class="text-primary">I made the switch on purpose.</span>
     </h2>
-    <div class="flex flex-row-reverse items-center justify-between">
+    <div class="flex md:flex-row-reverse flex-col items-center justify-between">
         <p class="my-8 max-w-lg text-2xl opacity-75">
             I studied business, then moved into development through hands-on
             learning, certifications, and real projects. That mix still shapes
             how I work today.
         </p>
-        {{ primaryButton() }}
+        <div class="md:inline hidden">
+            {{ primaryButton() }}
+        </div>
     </div>
     <div>{{ infoGrid({ data: education }) }}</div>
     <div>{{ infoGrid({ data: certifications }) }}</div>
+    <div class="md:hidden flex justify-center">
+        {{ primaryButton() }}
+    </div>
 </section>

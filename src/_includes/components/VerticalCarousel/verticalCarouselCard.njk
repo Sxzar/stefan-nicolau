@@ -8,13 +8,17 @@
 <div
     class="verticalCarousel--card group z-10 overflow-hidden rounded-[40px] !bg-stone-200 shadow-md"
 >
-    <a href="{% if props.card.url %}{{ props.card.url }}{% else %}#{% endif %}">
+    <a href="{% if props.card.url %}{{ props.card.url }}{% else %}#{% endif %}" aria-label="View {{ props.card.data.title }}">
         {% if props.card.data.image %}
         <picture>
             <img
                 src="{{imageDir}}/{{imageName}}-l.webp"
                 class="h-full w-full rounded-[42px] object-cover transition-all duration-500 group-hover:scale-105"
                 alt="{{ props.card.data.imageAlt }}"
+                loading="lazy"
+                width="980"
+                height="700"
+                decoding="async"
             />
         </picture>
         {% else %}
@@ -40,13 +44,13 @@
                 <a
                     href="{{props.card.url}}"
                     class="-mt-4 flex items-center gap-2 text-xl opacity-0 transition duration-300 group-hover:-translate-y-5 group-hover:opacity-100"
-                    >{{props.cta | default('View More')}}
+                    aria-label="{{props.cta | default('View More')}}" >{{props.cta | default('View More')}}
                     <span class="block h-[1px] w-10 bg-white"></span
                 ></a>
                 {% else %}
                 <a
                     href="{% if props.card.url %}{{ props.card.url }}{% else %}#{% endif %}"
-                    class="flex items-center gap-2 text-xl"
+                    class="flex items-center gap-2 text-xl" aria-label="{{props.cta | default('View More')}}"
                     >{{props.cta | default('View More')}}<span
                         class="block h-[1px] w-10 bg-white"
                     ></span

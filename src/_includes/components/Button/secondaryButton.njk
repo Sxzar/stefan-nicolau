@@ -1,7 +1,8 @@
 {% macro secondaryButton(props) %}
 <a
     href="{{ props.url | default('#') }}"
-    class="min-w-[200px] rounded-full border border-neutral text-center transition-all duration-500 ease-in-out hover:border-primary hover:text-primary"
+    class="min-w-[200px] max-w-fit block rounded-full border border-neutral text-center transition-all duration-500 ease-in-out hover:border-primary hover:text-primary"
+    aria-label="{{ props.text | default('Let\'s talk', true) }}"
 >
     <span class="leading-[3rem]"
         >{{ props.text | default('Let\'s talk', true) }}</span

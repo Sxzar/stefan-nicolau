@@ -6,12 +6,14 @@ autoplayCarouselCard %} {% macro autoplayCarousel(props) %}
         %}
     </div>
     <div
-        class="dots-container absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2"
+        class="dots-container absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-4"
     >
         {% for item in props.data %}
         <button
             class="dot h-3 w-3 rounded-full bg-stone-500"
             data-index="{{ loop.index0 }}"
+            aria-label="Slide {{ loop.index }}"
+            aria-current="{% if loop.index0 == 0 %}true{% else %}false{% endif %}"
         ></button>
         {% endfor %}
     </div>

@@ -1,7 +1,4 @@
-<a
-    href="{{ navPage.url }}"
-    class="text-primary hover:opacity-75"
-    aria-current="page"
->
+<a href="{{ navPage.url }}" class="text-primary hover:opacity-75" aria-current="page"
+    aria-label="{{ navPage.title | default('Active Link', true) }}">
     {{ navPage.title }}
 </a>
