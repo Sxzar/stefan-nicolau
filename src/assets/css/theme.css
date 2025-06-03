@@ -1249,6 +1249,10 @@ video {
   overflow: hidden;
 }
 
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
 .rounded-\[40px\] {
   border-radius: 40px;
 }

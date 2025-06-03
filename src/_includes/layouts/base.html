@@ -1,7 +1,7 @@
 <!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
     <head>
         <!-- Standard meta tags -->
         <meta charset="UTF-8" />
@@ -34,8 +34,14 @@
         <meta name="twitter:title" content="{{ title }}" />
         <meta name="twitter:description" content="{{ description }}" />
         <meta name="twitter:image" content="/assets/images/og-image.jpg" />
+        <meta property="og:image:alt" content="{{ title }} - Image preview" />
+        <meta name="twitter:image:alt" content="{{ title }} - Image preview" />
+        <meta name="apple-mobile-web-app-title" content="{{ client.name }}" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
 
         <meta name="author" content="Stefan Nicolau" />
+
+        <meta name="robots" content="index, follow" />
 
         <!--Favicons-->
         <link
@@ -90,6 +96,20 @@
             client.address.city }}, {{ client.address.state }} {% else %} {{
             title }} | {{ client.name }} {% endif %}
         </title>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "{{ client.name }}",
+                "url": "https://{{ client.shortDomain }}",
+                "author": {
+                    "@type": "Person",
+                    "name": "Stefan Nicolau"
+                },
+                "description": "{{ description }}"
+            }
+        </script>
     </head>
 
     <body class="bg-base-100 font-roboto text-neutral">

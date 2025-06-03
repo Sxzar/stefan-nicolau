@@ -3,6 +3,7 @@
     href="{{ props.url | default('#') }}"
     class="hover:afte:w-full relative block h-fit min-w-[200px] max-w-fit overflow-hidden rounded-full border border-neutral text-center transition-all duration-300 ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-0 after:bg-primary after:transition-all after:duration-[0.35s] after:content-[''] hover:border-primary hover:text-white hover:after:w-full"
     aria-label="{{ props.text | default('Let\'s talk', true) }}"
+    {% if props.url | isExternal %}target="_blank" rel="noopener noreferrer" {% endif %}
 >
     <span class="relative z-20 leading-[3rem]"
         >{{ props.text | default('Let\'s talk', true) }}</span
