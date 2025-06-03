@@ -1,8 +1,14 @@
 // imports
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const { DateTime } = require('luxon');
+const markdownIt = require('markdown-it');
+const md = new markdownIt();
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.addFilter('markdownify', (content) => {
+        return md.renderInline(content);
+    });
+
     // Custom merge filter
     eleventyConfig.addFilter('merge', function (obj, toMerge) {
         return Object.assign({}, obj, toMerge);
@@ -22,11 +28,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/_redirects');
     eleventyConfig.addPassthroughCopy({ './src/robots.txt': '/robots.txt' });
     eleventyConfig.addPassthroughCopy({ './src/sitemap.xml': '/sitemap.xml' });
-    eleventyConfig.addPassthroughCopy({ './src/ads.txt': '/ads.txt' });
-    eleventyConfig.addPassthroughCopy({
-        './src/BingSiteAuth.xml': '/BingSiteAuth.xml'
-    });
-
     // normally, 11ty will render dates on blog posts in full JSDate format (Fri Dec 02 18:00:00 GMT-0600)
     // this filter allows dates to be converted into a normal, locale format. view the docs to learn more (https://moment.github.io/luxon/api-docs/index.html#datetime)
     eleventyConfig.addFilter('postDate', (dateObj) => {
@@ -52,6 +53,7 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addNunjucksFilter('isExternal', function (url) {
+        if (typeof url !== 'string') return false;
         return url.startsWith('http://') || url.startsWith('https://');
     });
 

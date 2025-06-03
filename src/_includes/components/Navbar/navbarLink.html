@@ -1,2 +1,1 @@
-<a href="{{ navPage.url }}" class="hover:text-primary" aria-label="{{ navPage.title }}" {% if navPage.url | isExternal
-    %}target="_blank" rel="noopener noreferrer" {% endif %}> {{ navPage.title }} </a>
+<a href="{{ navPage.url }}" class="hover:text-primary" aria-label="{{ navPage.title }}" {% if navPage.url and (navPage.url | isExternal) %}target="_blank" rel="noopener noreferrer" {% endif %}> {{ navPage.title }} </a>

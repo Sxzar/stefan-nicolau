@@ -1,75 +1,143 @@
 ---
-preloadCSS: "/css/blog.css"
 eleventyComputed:
-    title: "{{ title }}"
-    description: "{{ description }}"
-    preloadImg: "{{ image }}"
-    permalink: "/resources/{{ title | sanitizeSlug }}/index.html"
+    title: '{{ title }}'
+    description: '{{ description }}'
+    preloadImg: '{{ image }}'
+    permalink: '/resources/{{ title | sanitizeSlug }}/index.html'
 ---
 
 {% extends "layouts/base.html" %} {% block head %}
-<link rel="stylesheet" href="/css/post.css" />
+
 <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "{{ title }}",
-      "image": [
-        "{{ image }}"
-       ],
-      "datePublished": "{{ date | postDate }}",
-      "dateModified": "{{ date | postDate }}",
-      "author": [{
-          "@type": "Person",
-          "name": "{{ author }}",
-          "url": "https://{{client.shortDomain}}/resources/{{ title | sanitizeSlug }}/index.html"
-        },{
-          "@type": "Person",
-          "name": "{{ author }}",
-          "url": "https://{{client.shortDomain}}/about/"
-      }]
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "{{ title }}",
+        "headline": "{{ title }}",
+        "description": "{{ description }}",
+        "url": "https://{{ client.shortDomain }}{{ page.url }}",
+        "datePublished": "{{ date | postDate }}",
+        "dateModified": "{{ date | postDate }}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ author }}",
+            "url": "https://{{ client.shortDomain }}/about/"
+        },
+        "image": {
+            "@type": "ImageObject",
+            "url": "{{ image }}",
+            "caption": "{{ title }}"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "{{ client.name }}",
+            "url": "https://{{ client.shortDomain }}",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "/assets/images/logo.png"
+            }
+        }
     }
-    </script>
+</script>
+
 {% endblock %} {% block body %}
 <!-- ============================================ -->
 <!--              Main Blog Content               -->
 <!-- ============================================ -->
 
-<section class="ps__blog-container container">
-	<!--Main content -->
-	<div class="ps__blog--main-content">
-		<!-- ============================================ -->
-		<!--                  Blog Article                -->
-		<!-- ============================================ -->
-
-		<div class="ps__blog--blog-article col-md-8 col-xs-12">
-			<div class="ps__blog--header row">
-				<!--Main Article Image-->
-				<div class="ps__blog--mainImage col-md-6 col-xs-12">
-					<picture>
-						<img src="{{ image }}" alt="{{ imageAlt }}" width="795" height="450" decoding="async" />
-					</picture>
-				</div>
-				<!--Article Info-->
-				<div class="ps__blog--article-group col-md-6 col-xs-12">
-					{% if shortTitle %}
-					<div class="ps__sectionSmallTitle">
-						<img src="/assets/svgs/sxzar-icon.svg" alt="sxzar icon" width="20" height="20">
-						<p>{{ shortTitle }}</p>
-					</div>
-					{% endif %}
-					<h1>{{ title }}</h1>
-					<div class="ps__blog--authorGroup">
-						<span class="ps__blog--authorGroup__author">{{ author }} &nbsp;-&nbsp;</span>
-						<!--Blog Date-->
-						<span class="ps__blog--authorGroup__date">{{ date | postDate }}</span>
-					</div>
-				</div>
-
-			</div>
-			<section class="ps__blog--content">{{ content | safe }}</section>
-		</div>
-	</div>
-
+<section class="mx-auto max-w-screen-lg p-6">
+    <div class="mb-6 grid gap-6 md:grid-cols-2">
+        <div>
+            <p class="text-lg uppercase">
+                {% for tag in tags | reject("equalto", "work") |
+                reject("equalto", "featured") %} {{ tag }} {% if not loop.last
+                %}<span class="opacity-75">,</span>{% endif %} {% endfor %}
+            </p>
+            <h1
+                class="py-8 font-raleway text-4xl font-medium leading-normal md:text-6xl"
+            >
+                {{title | safe }}
+            </h1>
+            <p class="post-content text-black/75 dark:text-white/75">
+                {{ description | markdownify | safe }}
+            </p>
+        </div>
+        <div>
+            <h2 class="pb-4 text-xl font-bold">Task</h2>
+            <p class="post-content text-black/75 dark:text-white/75">
+                {{ task | markdownify | safe }}
+            </p>
+            <div class="grid gap-4 md:grid-cols-3">
+                <div>
+                    <h3 class="pb-2 pt-4 text-xl font-bold">Role/Services</h3>
+                    <p class="text-md uppercase">
+                        {% for tag in tags | reject("equalto", "work") |
+                        reject("equalto", "featured") %} {{ tag }} {% if not
+                        loop.last %}<span class="opacity-75">,</span>{% endif %}
+                        {% endfor %}
+                    </p>
+                </div>
+                {% if client %}
+                <div>
+                    <h3 class="pb-2 pt-4 text-xl font-bold">Client</h3>
+                    <p class="text-md capitalize opacity-75">
+                        {{ projectClient }}
+                    </p>
+                </div>
+                {% endif %} {% if projectDate %}
+                <div>
+                    <h3 class="pb-2 pt-4 text-xl font-bold">Date</h3>
+                    <p class="text-md capitalize opacity-75">
+                        {{ projectDate | postDate }}
+                    </p>
+                </div>
+                {% endif %}
+            </div>
+            {% if projectUrl %}
+            <a
+                href="{{projectUrl}}"
+                {%
+                if
+                projectUrl
+                |
+                isExternal
+                %}
+                target="_blank"
+                rel="noopener noreferrer"
+                {%
+                endif
+                %}
+                class="group mt-6 flex items-center gap-2 text-xl font-bold transition-colors duration-300 ease-in-out hover:text-primary"
+            >
+                View Project
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    class="fill-neutral transition-colors duration-300 ease-in-out group-hover:fill-primary"
+                >
+                    <path
+                        d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                </svg>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+    <picture>
+        <img
+            src="{{ image }}"
+            alt="{{ imageAlt }}"
+            width="795"
+            height="450"
+            decoding="async"
+            loading="lazy"
+            class="h-auto w-full object-cover"
+        />
+    </picture>
+    <div class="prose prose-neutral dark:prose-invert post-content my-6">
+        {{ content | safe }}
+    </div>
 </section>
 {% endblock %}

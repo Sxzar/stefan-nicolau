@@ -21,11 +21,27 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'markdown' }
           - { label: 'Task', name: 'task', widget: 'markdown' }
-          - { label: 'Client', name: 'client', widget: 'string' }
-          - { label: 'Project Date', name: 'projectDate', widget: 'datetime' }
+          - {
+                label: 'Client',
+                name: 'projectClient',
+                widget: 'string',
+                required: false
+            }
+          - {
+                label: 'Project Date',
+                name: 'projectDate',
+                widget: 'datetime',
+                required: false
+            }
+          - {
+                label: 'Project URL',
+                name: 'projectUrl',
+                widget: 'string',
+                required: false
+            }
           - { label: 'Author', name: 'author', widget: 'string' }
           - { label: 'Date', name: 'date', widget: 'datetime' }
           - { label: 'Tags', name: 'tags', widget: 'list', default: ['post'] }
           - { label: 'Featured Image', name: 'image', widget: 'image' }
           - { label: 'Image Caption', name: 'imageAlt', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Body', name: 'body', widget: 'markdown', required: false }
