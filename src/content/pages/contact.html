@@ -1,17 +1,26 @@
 ---
-title: "Contact Us"
-description: "Contact us for more information about our services."
-permalink: "/contact/"
+title: 'Contact Us'
+description: 'Contact us for more information about our services.'
+permalink: '/contact/'
 eleventyNavigation:
     key: Contact
     order: 6
 ---
 
-{% extends "layouts/base.html" %}
-
-{% block head %}
-
-{% endblock %}
-{% block body %}
+{% extends "layouts/base.html" %} {% block head %} {% endblock %} {% block body
+%}
+<section class="mx-auto max-w-screen-lg p-6">
+    <h1
+        class="py-4 font-raleway text-4xl font-medium leading-normal md:text-7xl"
+    >
+        The best projects start with
+        <span class="text-primary">a simple conversation.</span>
+    </h1>
+    <p class="my-8 max-w-lg text-2xl opacity-75">
+        If you’re thinking about building something, or just want to ask a
+        question, I’d love to hear from you.
+    </p>
+    {% include "components/contactForm.njk" %}
+</section>
 
 {% endblock %}

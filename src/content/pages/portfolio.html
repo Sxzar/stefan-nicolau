@@ -11,12 +11,12 @@ eleventyNavigation:
 mosaicGrid %} {% block body %}
 
 <section class="mx-auto max-w-screen-lg p-6">
-    <h2
+    <h1
         class="py-4 font-raleway text-4xl font-medium leading-normal md:text-7xl"
     >
         Solving problems through design
         <span class="text-primary">and code</span>
-    </h2>
+    </h1>
 
     {# 1. Collect all tags from the work collection #} {% set allTags = [] %} {%
     for item in collections.work %} {% if item.data.tags %} {% set allTags =

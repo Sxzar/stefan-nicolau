@@ -1,0 +1,77 @@
+<section>
+    <form
+        name="contact"
+        method="POST"
+        action="thankyou.html"
+        data-netlify-recaptcha="true"
+        data-netlify="true"
+        netlify
+        class="mb-10"
+    >
+        <fieldset>
+            <legend class="sr-only">
+                Have a question, comment, or project in mind? Fill out the form
+                below, and I'll get back to you as soon as possible.
+            </legend>
+            <div class="flex flex-col">
+                <label class="pb-2 font-raleway text-xl opacity-75" for="f-name"
+                    >Your Name:</label
+                >
+                <input
+                    type="text"
+                    name="name"
+                    id="f-name"
+                    placeholder="e.g. John Doe"
+                    required
+                    oninvalid="this.setCustomValidity('Please, enter your name.')"
+                    onchange="this.setCustomValidity('')"
+                    autocomplete="name"
+                    class="mb-4 rounded-lg p-4 text-stone-900"
+                />
+                <label
+                    class="pb-2 font-raleway text-xl opacity-75"
+                    for="f-email"
+                    >Your Email:
+                </label>
+                <input
+                    type="email"
+                    name="email"
+                    id="f-email"
+                    placeholder="e.g. johndoe@email.com"
+                    required
+                    oninvalid="this.setCustomValidity('Please, enter a valid email address.')"
+                    onchange="this.setCustomValidity('')"
+                    autocomplete="email"
+                    class="mb-4 rounded-lg p-4 text-stone-900"
+                />
+                <label
+                    class="pb-2 font-raleway text-xl opacity-75"
+                    for="f-message"
+                    >Message:
+                </label>
+                <textarea
+                    name="message"
+                    id="f-message"
+                    placeholder="Leave me a message&hellip;"
+                    rows="5"
+                    required
+                    oninvalid="this.setCustomValidity('Please, enter your message.')"
+                    onchange="this.setCustomValidity('')"
+                    aria-label="Message"
+                    autocomplete="off"
+                    minlength="10"
+                    maxlength="5000"
+                    class="mb-4 rounded-lg p-4 text-stone-900"
+                ></textarea>
+                <div data-netlify-recaptcha="true"></div>
+                <button
+                    type="submit"
+                    aria-labelledby="send"
+                    class="hover:afte:w-full relative mx-auto block h-fit min-w-[200px] max-w-fit overflow-hidden rounded-full border border-neutral text-center transition-all duration-300 ease-in-out after:absolute after:left-0 after:top-0 after:h-full after:w-0 after:bg-primary after:transition-all after:duration-[0.35s] after:content-[''] hover:border-primary hover:text-white hover:after:w-full"
+                >
+                    <span class="relative z-20 leading-[3rem]"> Send </span>
+                </button>
+            </div>
+        </fieldset>
+    </form>
+</section>
