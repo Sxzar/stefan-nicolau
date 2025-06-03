@@ -3,13 +3,12 @@ from "components/VerticalCarousel/verticalCarousel.njk" import verticalCarousel
 %}
 
 <section class="mx-auto max-w-screen-lg p-6 pb-0">
-    <div class="flex items-center md:justify-between justify-center">
+    <div class="flex items-center justify-center md:justify-between">
         <h2 class="font-raleway text-4xl">Selected Works</h2>
 
-        <div class="md:inline hidden">
+        <div class="hidden md:inline">
             {{ secondaryButton({ url: '/work', text: 'See More' }) }}
         </div>
-
     </div>
     {% if collections.work | length > 0 %} {{ verticalCarousel({ data:
     collections.work }) }} {% else %}
@@ -17,7 +16,7 @@ from "components/VerticalCarousel/verticalCarousel.njk" import verticalCarousel
         <p class="font-raleway text-2xl">No projects found.</p>
     </div>
     {% endif %}
-    <div class="md:hidden flex items-center justify-center my-4">
+    <div class="my-4 flex items-center justify-center md:hidden">
         {{ secondaryButton({ url: '/work', text: 'See More' }) }}
     </div>
 </section>

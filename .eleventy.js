@@ -3,6 +3,16 @@ const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const { DateTime } = require('luxon');
 
 module.exports = function (eleventyConfig) {
+    // Custom merge filter
+    eleventyConfig.addFilter('merge', function (obj, toMerge) {
+        return Object.assign({}, obj, toMerge);
+    });
+
+    eleventyConfig.addFilter('mergeTag', function (map, key) {
+        let result = { ...map };
+        result[key] = true;
+        return result;
+    });
     // adds the official eleventy navigation plugin for a scalable navigation
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
 

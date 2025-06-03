@@ -1,4 +1,6 @@
-{% macro verticalCarouselCard(props) %} {% set fullPath = props.card.data.image
+{% macro verticalCarouselCard(props) %}
+  {% if props.card.data.tags and 'featured' in props.card.data.tags %}
+ {% set fullPath = props.card.data.image
 %} {% set parts = fullPath | split('/') %} {% set fileWithExt = parts | last %}
 {% set nameParts = fileWithExt | split('.') %} {% set imageName = nameParts[0]
 %} {% set imageDir = fullPath | replace('/' ~ fileWithExt, '') %}
@@ -60,4 +62,5 @@
         </div>
     </a>
 </div>
+{% endif%}
 {% endmacro %}

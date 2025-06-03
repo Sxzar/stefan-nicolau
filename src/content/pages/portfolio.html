@@ -1,0 +1,53 @@
+---
+title: 'Portfolio'
+description: 'Check out my portfolio of projects and works.'
+permalink: '/portfolio/'
+eleventyNavigation:
+    key: Portfolio
+    order: 2
+---
+
+{% extends "layouts/base.html" %} {% from 'containers/mosaicGrid.njk' import
+mosaicGrid %} {% block body %}
+
+<section class="mx-auto max-w-screen-lg p-6">
+    <h2
+        class="py-4 font-raleway text-4xl font-medium leading-normal md:text-7xl"
+    >
+        Solving problems through design
+        <span class="text-primary">and code</span>
+    </h2>
+
+    {# 1. Collect all tags from the work collection #} {% set allTags = [] %} {%
+    for item in collections.work %} {% if item.data.tags %} {% set allTags =
+    allTags.concat(item.data.tags) %} {% endif %} {% endfor %} {# 2. Create
+    unique tag map using the custom mergeTag filter #} {% set tagMap = {} %} {%
+    for tag in allTags %} {% set tagMap = tagMap | mergeTag(tag) %} {% endfor %}
+    {# 3. Extract tag list, clean, sort #} {% set uniqueTags = [] %} {% for tag,
+    _ in tagMap %} {% if tag != 'work' and tag != 'featured' %} {% set
+    uniqueTags = uniqueTags.concat(tag) %} {% endif %} {% endfor %} {% set
+    uniqueTags = uniqueTags | sort %}
+    <div class="my-6 flex flex-wrap justify-center gap-3">
+        <button
+            class="tag-filter px-2 py-2 uppercase hover:opacity-75"
+            data-tag="all"
+        >
+            All
+        </button>
+        {% for tag in uniqueTags %}
+        <span class="px-2 py-2">/</span>
+        <button
+            class="tag-filter py-2 uppercase hover:opacity-75"
+            data-tag="{{ tag }}"
+        >
+            {{ tag }}
+        </button>
+        {% endfor %}
+    </div>
+
+    {{ mosaicGrid(collections.work) }} {% include "containers/testimonials.njk"
+    %}
+</section>
+{% endblock %} {% block scripts %}
+<script src="/assets/js/filterTags.js" type="text/javascript" defer></script>
+{% endblock %}
