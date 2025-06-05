@@ -8,7 +8,7 @@
         "build:eleventy": "eleventy",
         "watch:cms": "npx netlify-cms-proxy-server",
         "start": "del-cli ./public --force && npm-run-all --parallel watch:*",
-        "build": "npm-run-all build:images build:eleventy",
+        "build": "npm-run-all build:eleventy",
         "tailwind": "tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/theme.css --watch"
     },
     "keywords": [],
