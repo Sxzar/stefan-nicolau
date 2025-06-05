@@ -7,7 +7,7 @@ from "components/VerticalCarousel/verticalCarousel.njk" import verticalCarousel
         <h2 class="font-raleway text-4xl">Selected Works</h2>
 
         <div class="hidden md:inline">
-            {{ secondaryButton({ url: '/work', text: 'See More' }) }}
+            {{ secondaryButton({ url: '/portfolio', text: 'See More' }) }}
         </div>
     </div>
     {% if collections.work | length > 0 %} {{ verticalCarousel({ data:
@@ -17,6 +17,6 @@ from "components/VerticalCarousel/verticalCarousel.njk" import verticalCarousel
     </div>
     {% endif %}
     <div class="my-4 flex items-center justify-center md:hidden">
-        {{ secondaryButton({ url: '/work', text: 'See More' }) }}
+        {{ secondaryButton({ url: '/portfolio', text: 'See More' }) }}
     </div>
 </section>
