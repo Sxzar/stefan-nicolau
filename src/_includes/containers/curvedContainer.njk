@@ -25,7 +25,9 @@
     <div
         class="mt-[96px] bg-stone-900 pb-[96px] dark:bg-stone-300 dark:bg-opacity-25"
     >
-        {% set tools = props.tools %} {% include props.file %}
+        {% if props.tools %}
+        {% set tools = props.tools %}{% endif %} {% include props.file %}
+        
     </div>
 </div>
 

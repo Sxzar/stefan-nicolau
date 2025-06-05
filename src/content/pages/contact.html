@@ -8,19 +8,20 @@ eleventyNavigation:
 ---
 
 {% extends "layouts/base.html" %} {% block head %} {% endblock %} {% block body
-%}
-<section class="mx-auto max-w-screen-lg p-6">
+%} {% from "containers/curvedContainer.njk" import curvedContainer %}
+<section class="mx-auto mb-10 max-w-screen-lg p-6">
     <h1
         class="py-4 font-raleway text-4xl font-medium leading-normal md:text-7xl"
     >
         The best projects start with
         <span class="text-primary">a simple conversation.</span>
     </h1>
-    <p class="my-8 max-w-lg text-2xl opacity-75">
-        If you’re thinking about building something, or just want to ask a
-        question, I’d love to hear from you.
-    </p>
-    {% include "components/contactForm.njk" %}
 </section>
-
+{{ curvedContainer({ file: "components/contactForm.njk" }) }} {% endblock %} {%
+block scripts %}
+<script
+    type="text/javascript"
+    src="https://assets.calendly.com/assets/external/widget.js"
+    async
+></script>
 {% endblock %}
