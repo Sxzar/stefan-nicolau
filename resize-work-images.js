@@ -12,6 +12,10 @@ const outputSizes = {
 };
 
 async function processImages() {
+    if (!fs.existsSync(inputDir)) {
+        fs.mkdirSync(inputDir, { recursive: true });
+        console.warn(`Created missing directory: ${inputDir}`);
+    }
     const sizeSuffixes = Object.keys(outputSizes);
 
     const files = fs
