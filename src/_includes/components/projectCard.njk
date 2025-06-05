@@ -1,7 +1,4 @@
-{% macro projectCard(props) %} {% set fullPath = props.card.image %} {% set
-parts = fullPath | split('/') %} {% set fileWithExt = parts | last %} {% set
-nameParts = fileWithExt | split('.') %} {% set imageName = nameParts[0] %} {%
-set imageDir = fullPath | replace('/' ~ fileWithExt, '') %}
+{% macro projectCard(props) %}
 <section class="group">
     <a href="{{props.url}}" aria-label="Read more about {{ props.card.title }}">
         <div
@@ -10,7 +7,7 @@ set imageDir = fullPath | replace('/' ~ fileWithExt, '') %}
             {% if props.card.image %}
             <picture>
                 <img
-                    src="{{imageDir}}/{{imageName}}-l.webp"
+                    src="{{ props.card.image }}"
                     class="h-full min-h-[500px] w-full rounded-xl object-cover transition-all duration-500 group-hover:scale-105"
                     alt="{{ props.card.imageAlt }}"
                     loading="lazy"

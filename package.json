@@ -6,7 +6,6 @@
     "scripts": {
         "watch:eleventy": "eleventy --serve",
         "build:eleventy": "eleventy",
-        "build:images": "node resize-work-images.js",
         "watch:cms": "npx netlify-cms-proxy-server",
         "start": "del-cli ./public --force && npm-run-all --parallel watch:*",
         "build": "npm-run-all build:images build:eleventy",

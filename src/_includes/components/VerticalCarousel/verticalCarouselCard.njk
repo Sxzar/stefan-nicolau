@@ -1,20 +1,19 @@
-{% macro verticalCarouselCard(props) %}
-  {% if props.card.data.tags and 'featured' in props.card.data.tags %}
- {% set fullPath = props.card.data.image
-%} {% set parts = fullPath | split('/') %} {% set fileWithExt = parts | last %}
-{% set nameParts = fileWithExt | split('.') %} {% set imageName = nameParts[0]
-%} {% set imageDir = fullPath | replace('/' ~ fileWithExt, '') %}
+{% macro verticalCarouselCard(props) %} {% if props.card.data.tags and
+'featured' in props.card.data.tags %}
 
 <!-- Tags -->
 
 <div
     class="verticalCarousel--card group z-10 overflow-hidden rounded-[40px] !bg-stone-200 shadow-md"
 >
-    <a href="{% if props.card.url %}{{ props.card.url }}{% else %}#{% endif %}" aria-label="View {{ props.card.data.title }}">
+    <a
+        href="{% if props.card.url %}{{ props.card.url }}{% else %}#{% endif %}"
+        aria-label="View {{ props.card.data.title }}"
+    >
         {% if props.card.data.image %}
         <picture>
             <img
-                src="{{imageDir}}/{{imageName}}-l.webp"
+                src="{{ props.card.data.image }}"
                 class="h-full w-full rounded-[42px] object-cover transition-all duration-500 group-hover:scale-105"
                 alt="{{ props.card.data.imageAlt }}"
                 loading="lazy"
@@ -25,7 +24,7 @@
         </picture>
         {% else %}
         <div
-            class="animate-shimmer absolute inset-0 -translate-x-full transform bg-gradient-to-r from-stone-200 via-stone-300 to-stone-200"
+            class="absolute inset-0 -translate-x-full transform animate-shimmer bg-gradient-to-r from-stone-200 via-stone-300 to-stone-200"
         ></div>
         {% endif %}
         <div
@@ -46,13 +45,15 @@
                 <a
                     href="{{props.card.url}}"
                     class="-mt-4 flex items-center gap-2 text-xl opacity-0 transition duration-300 group-hover:-translate-y-5 group-hover:opacity-100"
-                    aria-label="{{props.cta | default('View More')}}" >{{props.cta | default('View More')}}
+                    aria-label="{{props.cta | default('View More')}}"
+                    >{{props.cta | default('View More')}}
                     <span class="block h-[1px] w-10 bg-white"></span
                 ></a>
                 {% else %}
                 <a
                     href="{% if props.card.url %}{{ props.card.url }}{% else %}#{% endif %}"
-                    class="flex items-center gap-2 text-xl" aria-label="{{props.cta | default('View More')}}"
+                    class="flex items-center gap-2 text-xl"
+                    aria-label="{{props.cta | default('View More')}}"
                     >{{props.cta | default('View More')}}<span
                         class="block h-[1px] w-10 bg-white"
                     ></span
@@ -62,5 +63,4 @@
         </div>
     </a>
 </div>
-{% endif%}
-{% endmacro %}
+{% endif%} {% endmacro %}
