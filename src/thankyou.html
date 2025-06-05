@@ -1,13 +1,17 @@
 {% extends "layouts/base.html" %} {% block head %} {% endblock %} {% block body
-%}
-<section class="ps__thankyou text-center">
-    <h1>Thank You!</h1>
-    <p>Thank you for contacting us!</p>
-    <p>We will reply promptly once your message is received</p>
-    <p>Have a great day!</p>
-    <div class="text-center">
-        <a href="/"> Home Page </a>
-    </div>
+%}{% from "components/Button/primaryButton.njk" import primaryButton %}
+<section class="mx-auto flex h-dvh max-w-screen-lg flex-col justify-center p-6">
+    <h1
+        class="py-4 font-raleway text-4xl font-medium leading-normal md:text-7xl"
+    >
+        High five —
+        <span class="text-primary">your message is in good hands.</span>
+    </h1>
+    <p class="mb-10 max-w-lg text-2xl opacity-75 md:text-left">
+        I’ll be in touch shortly. Thanks for taking the time, seriously, I
+        appreciate it.
+    </p>
+    {{ primaryButton({url: '/', text: "Go back"}) }}
 </section>
 
 {% endblock %}
