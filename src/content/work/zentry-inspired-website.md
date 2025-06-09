@@ -7,12 +7,12 @@ description: >-
 
   Inspired by the sleek, animated design of [Zentry,](https://zentry.com) I set out to challenge myself by replicating a similar high-end user experience. The goal was to improve my animation skills and learn to use GSAP for scroll-based interactions in a modern frontend stack.
 task: |-
-  Advanced Scroll-Based Animations
-  Clip-Path Geometric Transitions
-  Mobile-Optimized Video Playback
-  3D Hover Interactions
-  Modular React Components
-  Visual Storytelling
+  * Advanced Scroll-Based Animations
+  * Clip-Path Geometric Transitions
+  * Mobile-Optimized Video Playback
+  * 3D Hover Interactions
+  * Modular React Components
+  * Visual Storytelling
 projectDate: 2025-06-09T12:29:26.482Z
 projectUrl: https://sn-zentry.netlify.app/
 author: Stefan Nicolau
