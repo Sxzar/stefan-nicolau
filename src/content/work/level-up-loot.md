@@ -18,7 +18,7 @@ author: Stefan Nicolau
 date: 2025-06-05T14:58:27.488Z
 tags:
   - featured
-  - full-stack
+  - fullstack
   - ux/ui
   - react
 image: /assets/images/work/level-upl-loot-cover.webp
