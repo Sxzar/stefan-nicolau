@@ -11,7 +11,7 @@ from "components/VerticalCarousel/verticalCarousel.njk" import verticalCarousel
         </div>
     </div>
     {% if collections.work | length > 0 %} {{ verticalCarousel({ data:
-    collections.work }) }} {% else %}
+    collections.work | reverse }) }} {% else %}
     <div class="flex h-[400dvh] items-center justify-center">
         <p class="font-raleway text-2xl">No projects found.</p>
     </div>
