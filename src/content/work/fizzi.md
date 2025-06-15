@@ -6,6 +6,9 @@ description: >-
 
 
   Fizzi is a vibrant beverage brand offering five fruit-flavored sodas enriched with prebiotics and probiotics, designed for people seeking a healthier alternative to traditional soft drinks. With a playful pop-art aesthetic and the motto “Live Gutsy,” the brand’s website needed to reflect its energetic personality while delivering a premium, motion-driven experience from the moment a user lands on the homepage.
+
+
+  [V﻿iew on Github](https://github.com/Sxzar/fizzi)
 task: |-
   * Scroll-synced GSAP homepage animations
   * Interactive 3D soda can built with React Three Fiber
