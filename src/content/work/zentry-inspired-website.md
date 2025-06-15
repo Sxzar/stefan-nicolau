@@ -6,6 +6,9 @@ description: >-
 
 
   Inspired by the sleek, animated design of [Zentry,](https://zentry.com) I set out to challenge myself by replicating a similar high-end user experience. The goal was to improve my animation skills and learn to use GSAP for scroll-based interactions in a modern frontend stack.
+
+
+  [V﻿iew on Github](https://github.com/Sxzar/redefine)
 task: |-
   * Advanced Scroll-Based Animations
   * Clip-Path Geometric Transitions
@@ -33,5 +36,3 @@ My objective was to build a **fully responsive** web experience that featured **
 I developed the project using **Vite** for fast builds, **React** with modular components, and **Tailwind CSS** for efficient styling using the OKLCH color model. For animations, I used **GSAP with ScrollTrigger** to animate elements on scroll and clip-path transitions. One of the main challenges was getting video playback to behave correctly on mobile devices without breaking the layout. I solved this by using the `playsInline` attribute and conditionally serving mobile-optimized video files. All animations were refined through careful experimentation and close reading of GSAP documentation.\
 \
 The result is a responsive, scroll-animated site that runs smoothly across devices. Despite using multiple animations and embedded videos, the project maintains a **96% performance score on Lighthouse**, with potential for even higher optimization if needed. Beyond refining my GSAP skillset, the project serves as a strong showcase piece for employers, highlighting both design sensitivity and frontend engineering skills.
-
-C﻿heck project on [Github](https://github.com/Sxzar/redefine).
