@@ -1,45 +1,41 @@
 ---
-title: Cressavon Café
-description: Cressavon Café is a high-end café based in Oregon, known for its
-  elegant ambiance, artisan menu, and vintage-inspired atmosphere. The goal was
-  to create a brand-new website that would match the brand’s sophistication and
-  charm while serving practical needs like showcasing the menu, providing
-  location details, and allowing direct customer inquiries. The client needed a
-  polished online presence that would appeal to both locals and tourists seeking
-  a unique dining experience.
+title: The Patty Wagon
+description: The Patty Wagon is a modern burger joint with a street-style
+  aesthetic, known for serving high-quality fast food with an urban twist. Their
+  goal was to establish a bold, energetic web presence that would reflect the
+  brand’s rebellious personality and connect with a younger, fast-paced
+  audience, one that values great design as much as great food.
 task: |-
-  * Elegant, mobile-first layout with vintage styling
-  * Full Decap CMS integration with custom collection types
-  * Menu management with item categories and pricing
-  * Contact form and location/map section
-  * SEO-optimized page structure and metadata
-  * WebP image conversion and lazy loading for performance
-  * Built with Eleventy, Nunjucks, Tailwind, and deployed on Netlify
-projectDate: 2025-02-20T17:03:50.851Z
-projectUrl: https://cressavon.netlify.app/
+  * Urban-inspired layout with bold color blocks and strong typography
+  * Tailwind-based responsive grid system
+  * All-caps heading system and split sections for visual rhythm
+  * Structured Decap CMS setup for menu management
+  * Lazy-loaded WebP images and compressed assets for fast load times
+  * Semantic HTML and ARIA roles for accessibility
+  * Built with Eleventy, styled with Tailwind CSS, hosted on Netlify
+projectDate: 2025-06-05T16:08:05.358Z
+projectUrl: https://pattywagon.netlify.app/
 author: Stefan Nicolau
-date: 2025-02-20T17:03:50.856Z
+date: 2025-06-05T16:08:05.362Z
 tags:
   - frontend
   - ux/ui
   - static
-image: /assets/images/work/cressavon-responsive.jpg
-imageAlt: Cressavon cover image
+image: /assets/images/work/cover.jpg
+imageAlt: the patty wagon - cover image
 ---
-I was hired as a freelance developer and designer to build the site from scratch, handling everything from UX/UI layout to CMS integration and performance tuning. The site had to deliver a sense of luxury and timelessness through its visuals, while remaining intuitive, responsive, and easy for the client to maintain over time.
+I was hired as a freelance developer to bring the brand to life online, building a bold and responsive website from scratch. The goal was to showcase the menu, capture the vibe of a modern street-food brand, and make updates easy via a CMS. The site had to be fast, mobile-first, and designed to stand out in a crowded food scene. 
 
-![cressavon layout](/assets/images/work/cressavon-cover.jpg "cressavon layout")
+I built the site using **11ty (Eleventy)** with **Nunjucks templates**, styled with **Tailwind CSS** and **daisyUI**, and integrated **Decap CMS** for easy content management. The visual direction focused on high contrast, big type, and structured layout rhythms that reflect the energy of The Patty Wagon’s food and brand voice.
 
-The website was developed using **11ty (Eleventy)** with **Nunjucks templates** and styled using **Tailwind CSS** alongside **daisyUI** components. I also handled all **Decap CMS** configuration to allow the client to update content such as menu items, gallery photos, and contact details without developer intervention.
+![the patty wagon mobile view](/assets/images/work/phone-layout.jpg "the patty wagon mobile view")
 
-**Key contributions:**
+**Key contributions included:**
 
-* **Elegant Layout & Page Development:** Designed and implemented the full site, including Homepage, About, Menu, Gallery, and Contact — using a grid-based system and vintage-inspired type styles for a refined, editorial feel.
-* **Custom CMS Configuration:** Structured Decap CMS content types to allow non-technical users to update the menu (with price fields, categories), upload gallery images, and edit business hours and contact info.
-* **Performance & Image Optimization:** Used `sharp` for image processing, converted assets to **WebP**, and implemented lazy loading and responsive image sets for fast rendering without sacrificing quality.
-* **SEO & Accessibility:** Built with semantic HTML5, added ARIA roles where necessary, and structured metadata and page content to support local SEO goals.
-* **Design-Driven Execution:** Paid close attention to spacing, typography, and subtle transitions to give the site a luxurious look and feel. Fonts and colors were carefully chosen to echo the café's interior design.
+* **Visual System & Layouts:** Developed a modular page structure using alternating black/yellow sections for rhythm and clarity. All content was centered and structured for mobile-first consumption, with consistent iconography and stylized section headings like “01 Burgers” and “02 Dogs”.
+* **Typography & Styling:** Implemented a bold all-caps heading system with strong sans-serif fonts to convey energy and confidence. Used custom Tailwind typography classes to keep styling scalable and readable.
+* **Menu & CMS Integration:** Set up a clean CMS structure via Decap for easy editing of menu categories, pricing, and descriptions — empowering the client to update burgers, dogs, and sides without code.
+* **Performance & Accessibility:** Optimized all assets with `sharp`, used semantic HTML5 and ARIA for accessibility, and implemented lazy loading for images. Achieved high scores in Lighthouse for performance, accessibility, and SEO.
+* **Interactive Touches:** Subtle hover animations, interactive call-to-actions, and a contact form with clear validation helped complete the modern, fast-food-inspired web experience.
 
-While the site was initially built for the client, I deployed a **demo version** to ensure portfolio continuity in case the live deployment is ever taken down or modified.
-
-The Cressavon site delivers a premium browsing experience that aligns beautifully with the café’s upscale image. Visitors can easily browse the menu, explore the space through a photo gallery, and find essential location and contact info. The content structure makes future updates simple and sustainable.
+The Patty Wagon website captures the high-energy personality of the brand while staying technically robust and scalable. It successfully blends style and substance — delivering an eye-catching, user-friendly experience that’s fast, mobile-optimized, and easy to manage. A live demo is available to ensure its place in my portfolio regardless of future deployment changes.
