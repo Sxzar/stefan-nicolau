@@ -17,7 +17,7 @@ task: |-
 projectDate: 2025-06-12T12:17:54.928Z
 projectUrl: https://sn-fizzi.vercel.app/
 author: Stefan Nicolau
-date: 2025-02-20T13:17:54.934Z
+date: 2025-06-05T13:58:00.000Z
 tags:
   - featured
   - ux/ui
