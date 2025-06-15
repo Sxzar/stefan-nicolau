@@ -24,12 +24,12 @@ mosaicGrid %} {% block body %}
     unique tag map using the custom mergeTag filter #} {% set tagMap = {} %} {%
     for tag in allTags %} {% set tagMap = tagMap | mergeTag(tag) %} {% endfor %}
     {# 3. Extract tag list, clean, sort #} {% set uniqueTags = [] %} {% for tag,
-    _ in tagMap %} {% if tag != 'work' and tag != 'featured' %} {% set
-    uniqueTags = uniqueTags.concat(tag) %} {% endif %} {% endfor %} {% set
+    _ in tagMap %} {% if tag != 'work' and tag != 'featured' and tag != '' %} {%
+    set uniqueTags = uniqueTags.concat(tag) %} {% endif %} {% endfor %} {% set
     uniqueTags = uniqueTags | sort %}
     <div class="my-6 flex flex-wrap justify-center gap-3">
         <button
-            class="tag-filter px-2 py-2 uppercase hover:opacity-75"
+            class="tag-filter px-2 py-2 uppercase transition-colors duration-300 ease-linear hover:text-primary"
             data-tag="all"
         >
             All
@@ -37,7 +37,7 @@ mosaicGrid %} {% block body %}
         {% for tag in uniqueTags %}
         <span class="px-2 py-2">/</span>
         <button
-            class="tag-filter py-2 uppercase hover:opacity-75"
+            class="tag-filter py-2 uppercase transition-colors duration-300 ease-linear hover:text-primary"
             data-tag="{{ tag }}"
         >
             {{ tag }}

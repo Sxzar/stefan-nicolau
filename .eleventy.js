@@ -6,7 +6,7 @@ const md = new markdownIt();
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('markdownify', (content) => {
-        return md.renderInline(content);
+        return md.render(content || '');
     });
 
     // Custom merge filter

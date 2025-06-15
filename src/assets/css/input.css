@@ -73,3 +73,15 @@ html.dark .sun-icon {
 .post-content img {
     @apply h-auto max-w-full object-cover;
 }
+
+.post-content p {
+    @apply my-2;
+}
+
+.post-content ul {
+    @apply my-2 list-disc pl-5;
+}
+
+.post-content li {
+    @apply my-1;
+}

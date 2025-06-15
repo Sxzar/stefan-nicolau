@@ -58,26 +58,26 @@ eleventyComputed:
             >
                 {{title | safe }}
             </h1>
-            <p class="post-content text-black/75 dark:text-white/75">
+            <div class="post-content text-black/75 dark:text-white/75">
                 {{ description | markdownify | safe }}
-            </p>
+            </div>
         </div>
         <div>
             <h2 class="pb-4 text-xl font-bold">Key Features</h2>
-            <p class="post-content text-black/75 dark:text-white/75">
-                {{ task | markdownify | safe }}
-            </p>
+            <div class="post-content text-black/75 dark:text-white/75">
+                {{ task | markdownify | safe}}
+            </div>
             <div class="grid gap-4 md:grid-cols-3">
                 <div>
                     <h3 class="pb-2 pt-4 text-xl font-bold">Role/Services</h3>
-                    <p class="text-md uppercase">
+                    <p class="text-sm uppercase">
                         {% for tag in tags | reject("equalto", "work") |
                         reject("equalto", "featured") %} {{ tag }} {% if not
                         loop.last %}<span class="opacity-75">,</span>{% endif %}
                         {% endfor %}
                     </p>
                 </div>
-                {% if client %}
+                {% if projectClient %}
                 <div>
                     <h3 class="pb-2 pt-4 text-xl font-bold">Client</h3>
                     <p class="text-md capitalize opacity-75">
@@ -107,7 +107,7 @@ eleventyComputed:
                 {%
                 endif
                 %}
-                class="group mt-6 flex items-center gap-2 text-xl font-bold transition-colors duration-300 ease-in-out hover:text-primary"
+                class="group mt-6 flex items-center gap-2 text-xl font-bold text-primary transition-colors duration-300 ease-in-out hover:text-neutral"
             >
                 View Project
                 <svg
@@ -115,7 +115,7 @@ eleventyComputed:
                     height="24px"
                     viewBox="0 -960 960 960"
                     width="24px"
-                    class="fill-neutral transition-colors duration-300 ease-in-out group-hover:fill-primary"
+                    class="fill-primary transition-colors duration-300 ease-in-out group-hover:fill-neutral"
                 >
                     <path
                         d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"

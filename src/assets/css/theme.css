@@ -966,12 +966,20 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
 
 .mt-16 {
   margin-top: 4rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
 }
 
 .mt-6 {
@@ -984,10 +992,6 @@ video {
 
 .mt-\[96px\] {
   margin-top: 96px;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
 }
 
 .block {
@@ -1114,14 +1118,6 @@ video {
 
 .max-w-xs {
   max-width: 20rem;
-}
-
-.max-w-4xl {
-  max-width: 56rem;
-}
-
-.max-w-2xl {
-  max-width: 42rem;
 }
 
 .-translate-x-1\/2 {
@@ -1291,6 +1287,11 @@ video {
   background-color: var(--neutral);
 }
 
+.bg-stone-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 229 228 / var(--tw-bg-opacity, 1));
+}
+
 .bg-stone-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(168 162 158 / var(--tw-bg-opacity, 1));
@@ -1309,11 +1310,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-stone-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(231 229 228 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gradient-to-r {
@@ -1351,6 +1347,10 @@ video {
 
 .fill-neutral {
   fill: var(--neutral);
+}
+
+.fill-primary {
+  fill: var(--primary);
 }
 
 .fill-stone-900 {
@@ -1566,11 +1566,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.invert {
-  --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .saturate-\[\.10\] {
   --tw-saturate: saturate(.10);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1616,6 +1611,10 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ease-linear {
+  transition-timing-function: linear;
 }
 
 html:not(.dark) .moon-icon {
@@ -1703,6 +1702,23 @@ html.dark .sun-icon {
      object-fit: cover;
 }
 
+.post-content p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-content ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+  padding-left: 1.25rem;
+}
+
+.post-content li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
@@ -1754,6 +1770,10 @@ html.dark .sun-icon {
   border-color: var(--primary);
 }
 
+.hover\:text-neutral:hover {
+  color: var(--neutral);
+}
+
 .hover\:text-primary:hover {
   color: var(--primary);
 }
@@ -1787,6 +1807,10 @@ html.dark .sun-icon {
   --tw-scale-x: .9;
   --tw-scale-y: .9;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:fill-neutral {
+  fill: var(--neutral);
 }
 
 .group:hover .group-hover\:fill-primary {
