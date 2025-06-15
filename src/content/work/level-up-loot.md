@@ -6,14 +6,17 @@ description: >-
 
 
   Level Up Loot is a personal project I designed and developed from scratch — a platform built for gamers to quickly discover the best game deals, claim free game offers, read news updates, and explore popular gameplay videos. It also includes a newsletter feature powered by Mailchimp to keep users updated.
+
+
+  [V﻿iew on Github](https://github.com/Sxzar/level-up-loot)
 task: |-
-  Live deals and discounts on popular games
-  Free game alerts (e.g., Epic Games giveaways)
-  Gaming news and video highlights
-  Mailchimp-powered newsletter signup
+  * Live deals and discounts on popular games
+  * Free game alerts (e.g., Epic Games giveaways)
+  * Gaming news and video highlights
+  * Mailchimp-powered newsletter signup
 projectClient: Personal
 projectDate: 2023-07-05T14:58:27.480Z
-projectUrl: https://leveluploot.netlify.app/gaming-news
+projectUrl: https://leveluploot.netlify.app
 author: Stefan Nicolau
 date: 2025-06-05T14:58:27.488Z
 tags:
@@ -34,6 +37,4 @@ As both designer and full-stack developer, I built the site using **React** with
 
 ![level up loot mobile view](/assets/images/work/leveluploot-phone.png "level up loot mobile view")
 
-To ensure top performance and accessibility, the site was optimized following best practices — scoring **99/100 in performance**, **93/100 in accessibility**, and **91/100 in SEO** in Google Lighthouse audits. It loads fast, works well across devices, and is easy to use even for casual visitors.\
-\
-Check the project on [Github - Level up loot](https://github.com/Sxzar/level-up-loot)
+To ensure top performance and accessibility, the site was optimized following best practices — scoring **99/100 in performance**, **93/100 in accessibility**, and **91/100 in SEO** in Google Lighthouse audits. It loads fast, works well across devices, and is easy to use even for casual visitors.
