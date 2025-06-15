@@ -1,20 +1,23 @@
-{% from 'components/projectCard.njk' import projectCard %} {% set layoutPattern
-= [ ['md:w-1/3', 'md:w-2/3'], ['md:w-1/3', 'md:w-1/3', 'md:w-1/3'], ['md:w-2/3',
-'md:w-1/3'] ] %} {% macro mosaicGrid(data, index = 0, patternIndex = 0) %} {% if
-index < data.length %}
+{% from "components/projectCard.njk" import projectCard %} {% macro
+mosaicGrid(data) %} {% set layoutPattern = [ ['md:w-1/3', 'md:w-2/3'],
+['md:w-1/3', 'md:w-1/3', 'md:w-1/3'], ['md:w-2/3', 'md:w-1/3'] ] %} {% set total
+= data.length %} {% set index = 0 %} {% set maxRows = (total / 2) | round(0,
+'ceil') %} {# Estimate max needed rows #}
 
-<div class="mx-auto mb-2 flex max-w-screen-lg flex-wrap">
-    {% set rowPattern = layoutPattern[patternIndex] %} {% for width in
-    rowPattern %} {% if index < data.length %} {% set project = data[index] %}
-    {% set tags = project.data.tags or [] %}
-    <div
-        class="{{ width }} w-full p-2 project-card"
-        data-tags="{{ tags | join(',') }}"
-    >
-        {{ projectCard({ card: project.data, url: project.url })}}
+<div id="project-grid">
+    {% for i in range(0, maxRows) %} {% set rowPattern = layoutPattern[i %
+    layoutPattern.length] %}
+    <div class="mx-auto mb-2 flex max-w-screen-lg flex-wrap">
+        {% for width in rowPattern %} {% if index < total %} {% set project =
+        data[index] %} {% set tags = project.data.tags or [] %}
+        <div
+            class="{{ width }} w-full p-2 project-card"
+            data-tags="{{ tags | join(',') }}"
+        >
+            {{ projectCard({ card: project.data, url: project.url }) }}
+        </div>
+        {% set index = index + 1 %} {% endif %} {% endfor %}
     </div>
-    {% set index = index + 1 %} {% endif %} {% endfor %}
+    {% endfor %}
 </div>
-
-{{ mosaicGrid(data, index, (patternIndex + 1) % layoutPattern.length) }} {%
-endif %} {% endmacro %}
+{% endmacro %}
